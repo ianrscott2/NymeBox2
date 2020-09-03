@@ -1,0 +1,14 @@
+{% extends 'nymebox/nymebox_base.html' %}
+
+{% block content %}
+
+Send files to  {{ config.FTP_URL }} 
+<P>
+<form action="NymeBox.py" name="FTP" method="POST">
+	<input type="checkbox" name="JPG" value="JPG" """ + {{ config.JPG }} + """>JPG
+	<input type="checkbox" name="GIF" value="GIF" """ + {{ config.GIF }} + """>GIF
+	<input type="checkbox" name="NEF" value="NEF" """ + {{ config.NEF }} + """ >NEF<br>
+	<input type="submit" value="Send via FTP" class="FTP">
+</form>
+
+{% endblock %}
