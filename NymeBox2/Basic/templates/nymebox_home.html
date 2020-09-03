@@ -14,6 +14,7 @@ Configured File types are:
 To update click admin/Basic/configitem/1/change/
 
 <form action="do_ftp/" name="FTP" method="POST">
+    {% csrf_token %}
 	<input type="submit" value="Send via FTP" class="FTP">
 </form>
 
