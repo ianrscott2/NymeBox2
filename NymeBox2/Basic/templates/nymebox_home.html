@@ -11,8 +11,9 @@ Configured File types are:
 {{ config.FileType_List }}
 <P>
 
-To update click admin/Basic/configitem/1/change/""
-<form action="Basic.nymebox.py {{ config.FTP_URL}} {{ config.FileType_List }} " name="FTP" method="POST">
+To update click admin/Basic/configitem/1/change/
+
+<form action="do_ftp/" name="FTP" method="POST">
 	<input type="submit" value="Send via FTP" class="FTP">
 </form>
 
