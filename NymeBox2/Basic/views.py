@@ -10,9 +10,12 @@ def index(request):
 
 def nymebox_home(request):
         config = ConfigItem.objects.get(pk=1)
+        #if config.GIF == "True":
+        #        config.GIF = "Checked"
         return render(request, 'nymebox_home.html', {'config':config})
 
 def config_by_id(request, config_id):
         config = ConfigItem.objects.get(pk=config_id)
         return render(request, 'config_details.html', {'config':config})
+
         #return HttpResponse(f"Config Field: {config.field}, Value: {config.value}")

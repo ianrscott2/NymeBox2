@@ -2,12 +2,17 @@
 
 {% block content %}
 
-Send files to  {{ config.FTP_URL }} 
+<p></p>
+
+Send files to  {{ config.FTP_URL }}
+<p></p>
+Configured File types are:
+
+{{ config.FileType_List }}
 <P>
-<form action="NymeBox.py" name="FTP" method="POST">
-	<input type="checkbox" name="JPG" value="JPG" """ + {{ config.JPG }} + """>JPG
-	<input type="checkbox" name="GIF" value="GIF" """ + {{ config.GIF }} + """>GIF
-	<input type="checkbox" name="NEF" value="NEF" """ + {{ config.NEF }} + """ >NEF<br>
+
+To update click admin/Basic/configitem/1/change/""
+<form action="Basic.nymebox.py {{ config.FTP_URL}} {{ config.FileType_List }} " name="FTP" method="POST">
 	<input type="submit" value="Send via FTP" class="FTP">
 </form>
 
