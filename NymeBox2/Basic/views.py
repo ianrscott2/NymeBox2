@@ -7,6 +7,9 @@ from .models import ConfigItem
 def index(request):
         return HttpResponse("Hello World!")
 
+def nymebox_home(request):
+        return HttpResponse("NymeBox Home!")
+
 def config_by_id(request, config_id):
         config = ConfigItem.objects.get(pk=config_id)
         return render(request, 'config_details.html', {'config':config})
