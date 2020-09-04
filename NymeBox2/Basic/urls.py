@@ -1,5 +1,6 @@
 from django.urls import path
-from dajaxice.core import dajaxice_autodiscover, dajaxice_config
+#from dajaxice.core import dajaxice_autodiscover, dajaxice_config
+from .Dajaxice import Dajaxice, dajaxice_autodiscover
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 
@@ -18,4 +19,3 @@ urlpatterns += patterns('',
    url(r'^%s/' % settings.DAJAXICE_MEDIA_PREFIX, include('dajaxice.urls')),)
 	
 urlpatterns += staticfiles_urlpatterns()
-
