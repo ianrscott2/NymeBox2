@@ -1,2 +1,6 @@
-2020-09-04 16:28:12.873889
-Executing the NymeBox Code! trek,ftpuser,ftpuser,NymeBox,/var/www/NymeBox/SDCARD/**,*.GIF,*.JPGExecuting FTP Connection: <ftplib.FTP object at 0x04983250>
+2020-09-04 18:44:33.413853
+Executing the NymeBox Code! trek,ftpuser,ftpuser,NymeBox/,C:\Users\Ian\Pictures\NymeBox\,*.GIF,*.JPG
+Looking for fileType *.GIF
+Looking for fileType *.JPG
+Looking at file C:\Users\Ian\Pictures\NymeBox\MidnightMassacre2019.jpg in <generator object _iglob at 0x04930BC0>
+Found the file C:\Users\Ian\Pictures\NymeBox\MidnightMassacre2019.jpg in the directory C:\Users\Ian\Pictures\NymeBox\
