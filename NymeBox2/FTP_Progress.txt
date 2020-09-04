@@ -1,0 +1,2 @@
+2020-09-04 16:28:12.873889
+Executing the NymeBox Code! trek,ftpuser,ftpuser,NymeBox,/var/www/NymeBox/SDCARD/**,*.GIF,*.JPGExecuting FTP Connection: <ftplib.FTP object at 0x04983250>

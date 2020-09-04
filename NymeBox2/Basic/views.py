@@ -14,8 +14,9 @@ def nymebox_home(request):
 @csrf_protect
 def do_ftp(request):
         #return HttpResponse("Trying to do an FTP!")
-        #config = ConfigItem.objects.get(pk=1)
-        #doing_ftp = NymeBox_Core.do_ftp(config.FTP_URL,config.FileType_List)
+        config = ConfigItem.objects.get(pk=1)
+        doing_ftp = NymeBox_Core.do_ftp(config.FtpURL,config.FileTypeList)
+        print(doing_ftp)
         return render(request,'nymebox_output.html')
 
 def config_by_id(request, config_id):
