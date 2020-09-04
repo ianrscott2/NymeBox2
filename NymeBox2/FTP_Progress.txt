@@ -1,6 +1,8 @@
-2020-09-04 18:44:33.413853
+2020-09-04 19:00:51.963427
 Executing the NymeBox Code! trek,ftpuser,ftpuser,NymeBox/,C:\Users\Ian\Pictures\NymeBox\,*.GIF,*.JPG
 Looking for fileType *.GIF
 Looking for fileType *.JPG
-Looking at file C:\Users\Ian\Pictures\NymeBox\MidnightMassacre2019.jpg in <generator object _iglob at 0x04930BC0>
+Looking at file C:\Users\Ian\Pictures\NymeBox\MidnightMassacre2019.jpg in <generator object _iglob at 0x04E1D840>
 Found the file C:\Users\Ian\Pictures\NymeBox\MidnightMassacre2019.jpg in the directory C:\Users\Ian\Pictures\NymeBox\
+Executing FTP Connection: <ftplib.FTP object at 0x04DBC808>
+1 of 1 : Trying to send C:\Users\Ian\Pictures\NymeBox\MidnightMassacre2019.jpg to NymeBox//04Sep2020190051-0.jpg

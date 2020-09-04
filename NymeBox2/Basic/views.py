@@ -23,3 +23,10 @@ def config_by_id(request, config_id):
         config = ConfigItem.objects.get(pk=config_id)
         return render(request, 'config_details.html', {'config':config})
         #return HttpResponse(f"Config Field: {config.field}, Value: {config.value}")
+
+def last_results(request):
+        return render(request,'nymebox_output.html')
+
+def dreamreal(request):
+   form = DreamrealForm()
+   return render(request, 'dreamreal.html', locals())

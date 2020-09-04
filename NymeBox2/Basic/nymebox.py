@@ -30,11 +30,7 @@ class NymeBox_Core:
         
         nymeLog.write("Executing the NymeBox Code! " + FtpURL + "," + FTPUser + "," + FTPPassword + "," + dest_dir + "," + source_dir + "," + FileTypeList + "\n")
 
-        #ftp = ftplib.FTP(FtpURL)
-        #ftp.login(FTPUser,FTPPassword)
-        #ftp.cwd(dest_dir)
 
-        #nymeLog.write("Executing FTP Connection: " + str(ftp) + "\n")
 
         mediaListNum = 0
         mediaList = []
@@ -54,17 +50,22 @@ class NymeBox_Core:
                         nymeLog.write("Didn't find any " + fileType + " media files in " + source_dir + "\n")
 
         n=0
-        
+        ftp = ftplib.FTP(FtpURL)
+        ftp.login(FTPUser,FTPPassword)
+        ftp.cwd(dest_dir)
+
+        nymeLog.write("Executing FTP Connection: " + str(ftp) + "\n")
+
         for eachPic in mediaList:
             if eachPic != "":
                 file_name, file_extension = os.path.splitext(eachPic)
                 eachPicDest = str(time) + "-" + str(n) + file_extension
-                nymeLog.write(str(n+1) + " of " + str(mediaListNum) + " : Trying to send " + eachPic + " to " + destRootDir + "/" + eachPicDest + "\n")
+                nymeLog.write(str(n+1) + " of " + str(mediaListNum) + " : Trying to send " + eachPic + " to " + dest_dir + "/" + eachPicDest + "\n")
                 file = open(eachPic, 'rb')
                 ftp.storbinary('STOR ' + eachPicDest, fp=file)
                 if process_mode == 'PROD':
-                    os.rename(eachPic,eachPic + '.moved')
-			    file.close()
+                    os.rename(eachPic,eachPic + '.moved')                
+                file.close()
             n=n+1
         ftp.quit()
         nymeLog.close()
