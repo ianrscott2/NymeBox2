@@ -4,6 +4,9 @@ from django.http import HttpResponse
 from .models import ConfigItem
 from .nymebox import NymeBox_Core
 
+from django.contrib.auth.forms import UserCreationForm
+from django.views.generic.edit import CreateView
+
 def index(request):
         return HttpResponse("Hello World!")
 
@@ -25,8 +28,6 @@ def config_by_id(request, config_id):
         #return HttpResponse(f"Config Field: {config.field}, Value: {config.value}")
 
 def last_results(request):
-        return render(request,'nymebox_output.html')
-
-def dreamreal(request):
-   form = DreamrealForm()
-   return render(request, 'dreamreal.html', locals())
+        outputfile = open("FTP_Progress.txt", "r")
+        fileContents=outputfile.read()
+        return render(request,'nymebox_output.html',{'output':fileContents})
