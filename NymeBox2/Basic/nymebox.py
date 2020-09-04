@@ -3,8 +3,10 @@ class NymeBox_Core:
     def __init__(self):
         self.data = []
 
-    def do_ftp(FtpURL, FileTypeList):
+    #def do_ftp(FtpURL, FileTypeList, FTPUser, FTPPassword):
 
+    def do_ftp(config):
+    
         import ftplib
         import os
         import datetime
@@ -28,9 +30,7 @@ class NymeBox_Core:
         nymeLog.write(str(time) + "\n")
         time = str(time.strftime("%d%b%Y%H%M%S"))
         
-        nymeLog.write("Executing the NymeBox Code! " + FtpURL + "," + FTPUser + "," + FTPPassword + "," + dest_dir + "," + source_dir + "," + FileTypeList + "\n")
-
-
+        nymeLog.write("Executing the NymeBox Code! " + config.FtpURL + "," + FTPUser + "," + FTPPassword + "," + dest_dir + "," + source_dir + "," + FileTypeList + "\n")
 
         mediaListNum = 0
         mediaList = []

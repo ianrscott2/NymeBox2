@@ -10,12 +10,26 @@ Configured File types are:
 
 {{ config.FileTypeList }}
 <P>
-
-To update click admin/Basic/configitem/1/change/
+<style>
+.FTP{
+background-color: green;
+border: none;
+color: black;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+width: 250px;
+}
+            
+</style>
 
 <form action="do_ftp/" name="FTP" method="POST">
     {% csrf_token %}
-	<input type="submit" value="Send via FTP" class="FTP">
+	<input type="submit" value="Send via FTP" class="FTP" > 
 </form>
 
 {% endblock %}

@@ -18,9 +18,11 @@ def nymebox_home(request):
 def do_ftp(request):
         #return HttpResponse("Trying to do an FTP!")
         config = ConfigItem.objects.get(pk=1)
-        doing_ftp = NymeBox_Core.do_ftp(config.FtpURL,config.FileTypeList)
+        doing_ftp = NymeBox_Core.do_ftp(config)
         print(doing_ftp)
-        return render(request,'nymebox_output.html')
+        outputfile = open("FTP_Progress.txt", "r")
+        fileContents=outputfile.read()
+        return render(request,'nymebox_output.html',{'output':fileContents})
 
 def config_by_id(request, config_id):
         config = ConfigItem.objects.get(pk=config_id)
@@ -28,6 +30,11 @@ def config_by_id(request, config_id):
         #return HttpResponse(f"Config Field: {config.field}, Value: {config.value}")
 
 def last_results(request):
+        outputfile = open("FTP_Progress.txt", "r")
+        fileContents=outputfile.read()
+        return render(request,'nymebox_output.html',{'output':fileContents})
+
+def settings(request):
         outputfile = open("FTP_Progress.txt", "r")
         fileContents=outputfile.read()
         return render(request,'nymebox_output.html',{'output':fileContents})
