@@ -1,10 +1,7 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_protect
-
 from django.http import HttpResponse
-
 from .models import ConfigItem
-
 from .nymebox import NymeBox_Core
 
 def index(request):
