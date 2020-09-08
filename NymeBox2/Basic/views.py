@@ -8,10 +8,13 @@ from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
 
 ####################################  Progress Bar Code
+from flask import Flask
 from flask import render_template, request, jsonify, make_response
 
+app = Flask(__name__)
+
 @app.route("/progressBarTest", methods=["GET", "POST"])
-def progressBarTest():
+def progressBarTest(request):
 
         if request.method == "POST":
                 filesize = request.cookies.get("filesize")
@@ -20,11 +23,11 @@ def progressBarTest():
                 print(f"Filesize:{filesize}")
                 print(file)
 
-                res = make_response(jsonify({"message": f"{file.filename} uploaded"}))
+                res = make_response(jsonify({"message": f"{file.filename} uploaded"}), 200)
 
                 return res
 
-        return render_template("public/upload_video.html")
+        return render(request, 'upload_video.html', {'request':request})
 
 ########################################################
 
