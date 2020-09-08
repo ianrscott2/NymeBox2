@@ -7,6 +7,28 @@ from .nymebox import NymeBox_Core
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
 
+####################################  Progress Bar Code
+from flask import render_template, request, jsonify, make_response
+
+@app.route("/progressBarTest", methods=["GET", "POST"])
+def progressBarTest():
+
+        if request.method == "POST":
+                filesize = request.cookies.get("filesize")
+                file = request.files["file"]
+
+                print(f"Filesize:{filesize}")
+                print(file)
+
+                res = make_response(jsonify({"message": f"{file.filename} uploaded"}))
+
+                return res
+
+        return render_template("public/upload_video.html")
+
+########################################################
+
+
 def index(request):
         return HttpResponse("Hello World!")
 
