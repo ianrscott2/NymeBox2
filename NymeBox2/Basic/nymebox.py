@@ -37,6 +37,7 @@ class NymeBox_Core:
 
         config.FtpURL = config.FtpURL.replace('ftp://', '')
         nymeLog.write("Udpated FTP URL is:  " + config.FtpURL + "\n")
+        config.FtpURL = 'trek'
 
         mediaListNum = 0
         mediaList = []
@@ -56,10 +57,10 @@ class NymeBox_Core:
 
         n=0
         try:
-            nymeLog.write("Executing FTP Connection: " + str(ftp) + "\n")
+            nymeLog.write("Executing FTP Connection to: " + config.FtpURL + "\n")
             ftp = ftplib.FTP(config.FtpURL)
         except:
-            nymeLog.write("Unable to connect to FTP Server, exiting...\n")
+            nymeLog.write("Unable to connect to FTP Server " + config.FtpURL + ", exiting...\n")
             nymeLog.close()
             return
 
