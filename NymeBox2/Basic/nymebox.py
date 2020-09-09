@@ -33,9 +33,9 @@ class NymeBox_Core:
         nymeLog.write("Source Dir is:       " + self.config.SourceDir + "\n")
         nymeLog.write("File Type List is:   " + self.config.FileTypeList + "\n")
 
-        self.FtpURL = self.FtpURL.replace('ftp://', '')
-        nymeLog.write("Udpated FTP URL is:  " + self.FtpURL + "\n")
-        self.FtpURL = 'trek'
+        self.config.FtpURL = self.config.FtpURL.replace('ftp://', '')
+        nymeLog.write("Udpated FTP URL is:  " + self.config.FtpURL + "\n")
+        self.config.FtpURL = 'trek'
 
         mediaListNum = 0
         mediaList = []
