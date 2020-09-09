@@ -11,7 +11,7 @@ def index(request):
         return HttpResponse("Hello World!")
 
 def nymebox_home(request):
-        config = ConfigItem.ProcMode.raw('SELECT *')
+        config = ConfigItem.ProcMode.raw('SELECT ProcMode, FtpURL FROM basic_configitem')
         print("the config type is: " + str(type(config)))
         return render(request, 'nymebox_home.html', {'config':config})
 
