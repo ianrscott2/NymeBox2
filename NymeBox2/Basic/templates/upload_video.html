@@ -77,7 +77,7 @@
 
             function upload(url) {
 
-                if (!input.value) {
+                if (!file_input.value) {
                     show_alert("No file selected", "Warning!");
                     return;
                 }
@@ -135,9 +135,10 @@
                 cancel_btn.addEventListener("click", function() {
                     request.abort();
                 })
+            }
 
             function reset() {
-                input.value = null;
+                file_input.value = null;
                 input.disabled = false;
                 cancel_btn.classList.add("d-none");
                 loading_btn.classList.add("d-none");
