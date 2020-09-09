@@ -7,3 +7,4 @@ class ConfigItem(models.Model):
     FTPPassword = models.CharField(max_length=250, default='')
     SourceDir = models.CharField(max_length=250, default='/var/www/NymeBox/SDCARD/**')
     DestDir = models.CharField(max_length=20, default='/NymeBox')
+    ProcMode = models.Manager()
