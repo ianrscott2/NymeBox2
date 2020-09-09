@@ -40,18 +40,18 @@ class NymeBox_Core:
         mediaListNum = 0
         mediaList = []
 
-        if self.FileTypeList != "":
-            for fileType in self.FileTypeList.split(","):
+        if self.config.FileTypeList != "":
+            for fileType in self.config.FileTypeList.split(","):
                 nymeLog.write("Looking for fileType " + fileType + "\n")
-                mediaFileList = glob.iglob(self.SourceDir + fileType, recursive=True)
+                mediaFileList = glob.iglob(self.config.SourceDir + fileType, recursive=True)
                 for filename in mediaFileList:
                     nymeLog.write("Looking at file " + filename + " in " + str(mediaFileList) + "\n")
                     if re.search("." + fileType + '$', filename, re.IGNORECASE):
-                        nymeLog.write("Found the file " + filename + " in the directory " + self.SourceDir + "\n")
+                        nymeLog.write("Found the file " + filename + " in the directory " + self.config.SourceDir + "\n")
                         mediaListNum += 1
                         mediaList.append(filename)
                     else:
-                        nymeLog.write("Didn't find any " + fileType + " media files in " + self.SourceDir + "\n")
+                        nymeLog.write("Didn't find any " + fileType + " media files in " + self.config.SourceDir + "\n")
 
         n=0
         try:
@@ -63,8 +63,8 @@ class NymeBox_Core:
             return
 
         nymeLog.write("Connected to: " + self.FtpURL + "\n")
-        ftp.login(self.FTPUser,config.FTPPassword)
-        ftp.cwd(self.DestDir)
+        ftp.login(self.config.FTPUser,config.FTPPassword)
+        ftp.cwd(self.config.DestDir)
 
         nymeLog.write("List of files to send: " + str(mediaList) + "\n")
 
@@ -73,7 +73,7 @@ class NymeBox_Core:
             if eachPic != "":
                 file_name, file_extension = os.path.splitext(eachPic)
                 eachPicDest = str(time) + "-" + str(n) + file_extension
-                nymeLog.write(str(n+1) + " of " + str(mediaListNum) + " : Trying to send " + eachPic + " to " + config.DestDir + "/" + eachPicDest + "\n")
+                nymeLog.write(str(n+1) + " of " + str(mediaListNum) + " : Trying to send " + eachPic + " to " + self.config.DestDir + "/" + eachPicDest + "\n")
                 file = open(eachPic, 'rb')
                 ftp_status = ftp.storbinary('STOR ' + eachPicDest, fp=file)
                 file.close()
