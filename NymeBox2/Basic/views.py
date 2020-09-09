@@ -12,7 +12,7 @@ def index(request):
 
 def nymebox_home(request):
         config = ConfigItem.ProcMode.get(pk=1)
-        print(type(config))
+        print("the config type is: " + type(config))
         return render(request, 'nymebox_home.html', {'config':config})
 
 def updatefile(request):
