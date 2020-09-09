@@ -27,11 +27,11 @@ class NymeBox_Core:
         time = str(time.strftime("%d%b%Y%H%M%S"))
         
         nymeLog.write("FTP URL is:          " + self.config.FtpURL + "\n")
-        nymeLog.write("FTP User is:         " + self.FTPUser + "\n")
-        nymeLog.write("FTP Password is:     " + self.FTPPassword + "\n")
-        nymeLog.write("Destination Dir is:  " + self.DestDir + "\n")
-        nymeLog.write("Source Dir is:       " + self.SourceDir + "\n")
-        nymeLog.write("File Type List is:   " + self.FileTypeList + "\n")
+        nymeLog.write("FTP User is:         " + self.config.FTPUser + "\n")
+        nymeLog.write("FTP Password is:     " + self.config.FTPPassword + "\n")
+        nymeLog.write("Destination Dir is:  " + self.config.DestDir + "\n")
+        nymeLog.write("Source Dir is:       " + self.config.SourceDir + "\n")
+        nymeLog.write("File Type List is:   " + self.config.FileTypeList + "\n")
 
         self.FtpURL = self.FtpURL.replace('ftp://', '')
         nymeLog.write("Udpated FTP URL is:  " + self.FtpURL + "\n")
