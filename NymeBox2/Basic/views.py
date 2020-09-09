@@ -26,7 +26,7 @@ def FTPLog(request):
 @csrf_protect
 def do_ftp(request):
         #return HttpResponse("Trying to do an FTP!")
-        #config = ConfigItem.objects.get(pk=1)
+        #config = ConfigItem
         NymeBox_Core.do_ftp(ConfigItem.pk[1])
         outputfile = open("Basic//FTP_Progress.txt", "r")
         fileContents=outputfile.read()
