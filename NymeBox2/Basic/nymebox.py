@@ -73,7 +73,7 @@ class NymeBox_Core:
             if eachPic != "":
                 file_name, file_extension = os.path.splitext(eachPic)
                 eachPicDest = str(time) + "-" + str(n) + file_extension
-                nymeLog.write(str(n+1) + " of " + str(mediaListNum) + " : Trying to send " + eachPic + " to " + self.config.DestDir + "/" + eachPicDest + "\n")
+                nymeLog.write(str(n+1) + " of " + str(mediaListNum) + " : Trying to send " + file_name + " to " + self.config.DestDir + "/" + eachPicDest + "\n")
                 file = open(eachPic, 'rb')
                 ftp_status = ftp.storbinary('STOR ' + eachPicDest, fp=file)
                 file.close()
