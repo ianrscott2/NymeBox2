@@ -15,12 +15,13 @@ class NymeBox_Core:
         import sys
 
         nymeLogFile = './FTP_Progress.txt'
-        nymeLog    = open(nymeLogFile, 'w+')
+        nymeLog    = open(nymeLogFile, 'r+')
         #FTPUser = 'ftpuser'
         #FTPPassword = 'ftpuser'
         #SourceDir = '/var/www/NymeBox/SDCARD/**'
         #SourceDir = 'C:\\Users\\Ian\\Pictures\\NymeBox\\'
-        process_mode = 'PROD'
+        process_mode = 'TEST'
+        #process_mode = 'PROD'
         #DestDir = 'NymeBox/'
         #FtpURL = 'trek'
 
@@ -73,10 +74,12 @@ class NymeBox_Core:
                 eachPicDest = str(time) + "-" + str(n) + file_extension
                 nymeLog.write(str(n+1) + " of " + str(mediaListNum) + " : Trying to send " + eachPic + " to " + config.DestDir + "/" + eachPicDest + "\n")
                 file = open(eachPic, 'rb')
-                ftp.storbinary('STOR ' + eachPicDest, fp=file)
+                ftp_status = ftp.storbinary('STOR ' + eachPicDest, fp=file)
+                file.close()
+                nymeLog.write(ftp_status)
                 if process_mode == 'PROD':
                     os.rename(eachPic,eachPic + '.moved')                
-                file.close()
+
             n=n+1
         ftp.quit()
         nymeLog.close()

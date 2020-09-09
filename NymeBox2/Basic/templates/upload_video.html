@@ -1,3 +1,10 @@
+{% extends 'nymebox/nymebox_base.html' %}
+
+{% block content %}
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,6 +24,7 @@
                     <div class="mb-3 mt-3">
                         <h2 class="mb-3" style="font-weight: 300">Upload Video</h2>
                         <div class="form-group mb-3">
+                            {% csrf_token %}
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="file_input" oninput="input_filename();">
                                 <label for="file_input" id="file_input_label" class="custom-file-label">Select file</label>
@@ -78,7 +86,7 @@
             function upload(url) {
 
                 if (!file_input.value) {
-                    show_alert("No file selected", "Warning!");
+                    show_alert("No file selected", "warning");
                     return;
                 }
 
@@ -139,7 +147,7 @@
 
             function reset() {
                 file_input.value = null;
-                input.disabled = false;
+                file_input.disabled = false;
                 cancel_btn.classList.add("d-none");
                 loading_btn.classList.add("d-none");
                 upload_btn.classList.remove("d-none");
@@ -154,4 +162,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
-</html>
+    
+    {% endblock %}
+
+    </html>

@@ -1,7 +1,8 @@
-{% extends 'nymebox/nymebox_base.html' %}
-<header>
+<html>
 
-<script type="text/javascript">
+<header>
+    
+    <script type="text/javascript">
 
     function Ajax()
     {
@@ -27,7 +28,7 @@
                     setTimeout(function(){$self();}, 1000);
                 }
             };
-            $http.open('GET', 'update_file.php' + '?' + new Date().getTime(), true);
+            $http.open('GET', 'updatefile/update_file.php' + '?' + new Date().getTime(), true);
             $http.send(null);
         }
 
@@ -37,14 +38,11 @@
 
 </header>
 <p>
-{% block content %}
-
+<body>
 <script type="text/javascript">
     setTimeout(function() {Ajax();}, 1000);
 </script>
 
 <div id="ReloadThis">Default text</div>
-
-<pre>{{ output }}</pre>
-
-{% endblock %}
+</body>
+</html>
