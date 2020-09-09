@@ -26,7 +26,7 @@ class NymeBox_Core:
         nymeLog.write(str(time) + "\n")
         time = str(time.strftime("%d%b%Y%H%M%S"))
         
-        nymeLog.write("FTP URL is:          " + self.FtpURL + "\n")
+        nymeLog.write("FTP URL is:          " + self.config.FtpURL + "\n")
         nymeLog.write("FTP User is:         " + self.FTPUser + "\n")
         nymeLog.write("FTP Password is:     " + self.FTPPassword + "\n")
         nymeLog.write("Destination Dir is:  " + self.DestDir + "\n")
