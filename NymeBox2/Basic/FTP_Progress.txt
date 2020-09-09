@@ -1,4 +1,4 @@
-2020-09-09 15:59:21.367342
+2020-09-09 20:59:25.620126
 FTP URL is:          ftp://qlink.to/TREK3
 FTP User is:         ftpuser
 FTP Password is:     ftpuser
@@ -8,7 +8,7 @@ File Type List is:   *.GIF,*.JPG
 Udpated FTP URL is:  qlink.to/TREK3
 Looking for fileType *.GIF
 Looking for fileType *.JPG
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg in <generator object _iglob at 0x051A3290>
+Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg in <generator object _iglob at 0x050C03E0>
 Found the file C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
 Executing FTP Connection to: trek
 Connected to: trek
