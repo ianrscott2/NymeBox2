@@ -1,9 +1,9 @@
 class NymeBox_Core:
 
-    def __init__(self):
-        self.data = []
+    def __init__(self, config):
+        self.data = config
 
-    def do_ftp(self, config):
+    def do_ftp(self):
     
         import ftplib
         import os
@@ -26,12 +26,12 @@ class NymeBox_Core:
         nymeLog.write(str(time) + "\n")
         time = str(time.strftime("%d%b%Y%H%M%S"))
         
-        nymeLog.write("FTP URL is:          " + config.FtpURL + "\n")
-        nymeLog.write("FTP User is:         " + config.FTPUser + "\n")
-        nymeLog.write("FTP Password is:     " + config.FTPPassword + "\n")
-        nymeLog.write("Destination Dir is:  " + config.DestDir + "\n")
-        nymeLog.write("Source Dir is:       " + config.SourceDir + "\n")
-        nymeLog.write("File Type List is:   " + config.FileTypeList + "\n")
+        nymeLog.write("FTP URL is:          " + self.FtpURL + "\n")
+        nymeLog.write("FTP User is:         " + self.FTPUser + "\n")
+        nymeLog.write("FTP Password is:     " + self.FTPPassword + "\n")
+        nymeLog.write("Destination Dir is:  " + self.DestDir + "\n")
+        nymeLog.write("Source Dir is:       " + self.SourceDir + "\n")
+        nymeLog.write("File Type List is:   " + self.FileTypeList + "\n")
 
         config.FtpURL = config.FtpURL.replace('ftp://', '')
         nymeLog.write("Udpated FTP URL is:  " + config.FtpURL + "\n")
