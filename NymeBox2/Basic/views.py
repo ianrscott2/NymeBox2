@@ -39,6 +39,6 @@ def config_by_id(request, config_id):
         #return HttpResponse(f"Config Field: {config.field}, Value: {config.value}")
 
 def last_results(request):
-        outputfile = open("Basic/FTP_Progress.txt", "r")
+        outputfile = open("Basic//FTP_Progress.txt", "r")
         fileContents=outputfile.read()
         return render(request,'nymebox_lastlog.html',{'output':fileContents})
