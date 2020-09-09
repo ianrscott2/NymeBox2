@@ -11,8 +11,8 @@ def index(request):
         return HttpResponse("Hello World!")
 
 def nymebox_home(request):
-        config = ConfigItem.ProcMode.get(pk=1)
-        print("the config type is: " + type(config))
+        config = ConfigItem.ProcMode.raw('SELECT *')
+        print("the config type is: " + str(type(config)))
         return render(request, 'nymebox_home.html', {'config':config})
 
 def updatefile(request):
