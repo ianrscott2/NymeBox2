@@ -55,15 +55,15 @@ class NymeBox_Core:
 
         n=0
         try:
-            nymeLog.write("Executing FTP Connection to: " + config.FtpURL + "\n")
+            nymeLog.write("Executing FTP Connection to: " + self.config.FtpURL + "\n")
             ftp = ftplib.FTP(self.FtpURL)
         except:
-            nymeLog.write("Unable to connect to FTP Server " + config.FtpURL + ", exiting...\n")
+            nymeLog.write("Unable to connect to FTP Server " + self.config.FtpURL + ", exiting...\n")
             nymeLog.close()
             return
 
         nymeLog.write("Connected to: " + self.FtpURL + "\n")
-        ftp.login(self.config.FTPUser,config.FTPPassword)
+        ftp.login(self.config.FTPUser,self.config.FTPPassword)
         ftp.cwd(self.config.DestDir)
 
         nymeLog.write("List of files to send: " + str(mediaList) + "\n")
