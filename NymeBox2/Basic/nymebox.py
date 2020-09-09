@@ -3,7 +3,7 @@ class NymeBox_Core:
     def __init__(self):
         self.data = []
 
-    def do_ftp(self,config):
+    def do_ftp(config):
     
         import ftplib
         import os
