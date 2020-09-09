@@ -11,7 +11,7 @@ def index(request):
         return HttpResponse("Hello World!")
 
 def nymebox_home(request):
-        config = ConfigItem.objects.get(pk=1)
+        config = ConfigItem.ProcMode.get(pk=1)
         return render(request, 'nymebox_home.html', {'config':config})
 
 def updatefile(request):
@@ -26,15 +26,15 @@ def FTPLog(request):
 @csrf_protect
 def do_ftp(request):
         #return HttpResponse("Trying to do an FTP!")
-        config = ConfigItem.objects.get(pk=1)
+        config = ConfigItem.ProcMode.get(pk=1)
         NymeBox_Core.do_ftp(config)
         outputfile = open("Basic//FTP_Progress.txt", "r")
         fileContents=outputfile.read()
         return render(request,'nymebox_output.html',{'output':fileContents})
 
 def config_by_id(request, config_id):
-        #config = ConfigItem.objects.get(pk=config_id)
-        return render(request, 'config_details.html', {'config':ConfigItem.pk[1]})
+        config = ConfigItem.ProcMode.get(pk=config_id)
+        return render(request, 'config_details.html', {'config':config})
         #return HttpResponse(f"Config Field: {config.field}, Value: {config.value}")
 
 def last_results(request):
