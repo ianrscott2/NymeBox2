@@ -28,8 +28,8 @@ def FTPLog(request):
 def do_ftp(request):
         #return HttpResponse("Trying to do an FTP!")
         config = ConfigItem.ProcMode.get(pk=1)
-        ftping = NymeBox_Core()
-        ftping.do_ftp(config)
+        ftping = NymeBox_Core(config)
+        ftping.do_ftp()
         outputfile = open("Basic//FTP_Progress.txt", "r")
         fileContents=outputfile.read()
         return render(request,'nymebox_output.html',{'output':fileContents})
