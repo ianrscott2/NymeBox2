@@ -15,7 +15,7 @@ class NymeBox_Core:
         import sys
 
         nymeLogFile = './/Basic//FTP_Progress.txt'
-        nymeLog    = open(nymeLogFile, 'r+')
+        nymeLog    = open(nymeLogFile, 'w')
         #SourceDir = '/var/www/NymeBox/SDCARD/**'
         #SourceDir = 'C:\\Users\\Ian\\Pictures\\NymeBox\\'
         process_mode = 'TEST'
@@ -26,9 +26,9 @@ class NymeBox_Core:
         nymeLog.write(str(time) + "\n")
         time = str(time.strftime("%d%b%Y%H%M%S"))
         
-        nymeLog.write("FTP URL is:          " + self.config.FtpURL + "\n")
+        
         nymeLog.write("FTP User is:         " + self.config.FTPUser + "\n")
-        nymeLog.write("FTP Password is:     " + self.config.FTPPassword + "\n")
+        #nymeLog.write("FTP Password is:     " + self.config.FTPPassword + "\n")
         nymeLog.write("Destination Dir is:  " + self.config.DestDir + "\n")
         nymeLog.write("Source Dir is:       " + self.config.SourceDir + "\n")
         nymeLog.write("File Type List is:   " + self.config.FileTypeList + "\n")
@@ -36,6 +36,7 @@ class NymeBox_Core:
         self.config.FtpURL = self.config.FtpURL.replace('ftp://', '')
         nymeLog.write("Udpated FTP URL is:  " + self.config.FtpURL + "\n")
         self.config.FtpURL = 'trek'
+        nymeLog.write("FTP URL is:          " + self.config.FtpURL + "\n")
 
         mediaListNum = 0
         mediaList = []
