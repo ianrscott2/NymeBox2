@@ -1,7 +1,7 @@
 class NymeBox_Core:
 
     def __init__(self, config):
-        self.data = config
+        self.config = config
 
     def do_ftp(self):
     
@@ -33,38 +33,38 @@ class NymeBox_Core:
         nymeLog.write("Source Dir is:       " + self.SourceDir + "\n")
         nymeLog.write("File Type List is:   " + self.FileTypeList + "\n")
 
-        config.FtpURL = config.FtpURL.replace('ftp://', '')
-        nymeLog.write("Udpated FTP URL is:  " + config.FtpURL + "\n")
-        config.FtpURL = 'trek'
+        self.FtpURL = self.FtpURL.replace('ftp://', '')
+        nymeLog.write("Udpated FTP URL is:  " + self.FtpURL + "\n")
+        self.FtpURL = 'trek'
 
         mediaListNum = 0
         mediaList = []
 
-        if config.FileTypeList != "":
-            for fileType in config.FileTypeList.split(","):
+        if self.FileTypeList != "":
+            for fileType in self.FileTypeList.split(","):
                 nymeLog.write("Looking for fileType " + fileType + "\n")
-                mediaFileList = glob.iglob(config.SourceDir + fileType, recursive=True)
+                mediaFileList = glob.iglob(self.SourceDir + fileType, recursive=True)
                 for filename in mediaFileList:
                     nymeLog.write("Looking at file " + filename + " in " + str(mediaFileList) + "\n")
                     if re.search("." + fileType + '$', filename, re.IGNORECASE):
-                        nymeLog.write("Found the file " + filename + " in the directory " + config.SourceDir + "\n")
+                        nymeLog.write("Found the file " + filename + " in the directory " + self.SourceDir + "\n")
                         mediaListNum += 1
                         mediaList.append(filename)
                     else:
-                        nymeLog.write("Didn't find any " + fileType + " media files in " + config.SourceDir + "\n")
+                        nymeLog.write("Didn't find any " + fileType + " media files in " + self.SourceDir + "\n")
 
         n=0
         try:
             nymeLog.write("Executing FTP Connection to: " + config.FtpURL + "\n")
-            ftp = ftplib.FTP(config.FtpURL)
+            ftp = ftplib.FTP(self.FtpURL)
         except:
             nymeLog.write("Unable to connect to FTP Server " + config.FtpURL + ", exiting...\n")
             nymeLog.close()
             return
 
-        nymeLog.write("Connected to: " + config.FtpURL + "\n")
-        ftp.login(config.FTPUser,config.FTPPassword)
-        ftp.cwd(config.DestDir)
+        nymeLog.write("Connected to: " + self.FtpURL + "\n")
+        ftp.login(self.FTPUser,config.FTPPassword)
+        ftp.cwd(self.DestDir)
 
         nymeLog.write("List of files to send: " + str(mediaList) + "\n")
 
