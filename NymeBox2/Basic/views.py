@@ -15,15 +15,21 @@ def nymebox_home(request):
         return render(request, 'nymebox_home.html', {'config':config})
 
 def updatefile(request):
-        return render(request,'update_file.php')
+        return render(request,'test_log.html')
 
+def FTPLog(request):
+        outputfile = open("Basic\FTP_Progress.txt", "r")
+        fileContents=outputfile.read()
+        outputfile.close()
+        return render(request,'nymebox_logfile.html',{'output':fileContents})
+        
 @csrf_protect
 def do_ftp(request):
         #return HttpResponse("Trying to do an FTP!")
         config = ConfigItem.objects.get(pk=1)
         doing_ftp = NymeBox_Core.do_ftp(config)
         print(doing_ftp)
-        outputfile = open("FTP_Progress.txt", "r")
+        outputfile = open("Basic\FTP_Progress.txt", "r")
         fileContents=outputfile.read()
         return render(request,'nymebox_output.html',{'output':fileContents})
 
@@ -33,11 +39,6 @@ def config_by_id(request, config_id):
         #return HttpResponse(f"Config Field: {config.field}, Value: {config.value}")
 
 def last_results(request):
-        outputfile = open("FTP_Progress.txt", "r")
+        outputfile = open("Basic\FTP_Progress.txt", "r")
         fileContents=outputfile.read()
-        return render(request,'nymebox_output.html',{'output':fileContents})
-
-def settings(request):
-        outputfile = open("FTP_Progress.txt", "r")
-        fileContents=outputfile.read()
-        return render(request,'nymebox_output.html',{'output':fileContents})
+        return render(request,'nymebox_lastlog.html',{'output':fileContents})

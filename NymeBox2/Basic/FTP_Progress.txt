@@ -1,0 +1,18 @@
+2020-09-09 15:59:21.367342
+FTP URL is:          ftp://qlink.to/TREK3
+FTP User is:         ftpuser
+FTP Password is:     ftpuser
+Destination Dir is:  NymeBox/
+Source Dir is:       C:\\Users\\Ian\\Pictures\\NymeBox\\
+File Type List is:   *.GIF,*.JPG
+Udpated FTP URL is:  qlink.to/TREK3
+Looking for fileType *.GIF
+Looking for fileType *.JPG
+Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg in <generator object _iglob at 0x051A3290>
+Found the file C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
+Executing FTP Connection to: trek
+Connected to: trek
+List of files to send: ['C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\MidnightMassacre2019.jpg']
+Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg
+1 of 1 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg to NymeBox//09Sep2020155921-0.jpg
+226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg.

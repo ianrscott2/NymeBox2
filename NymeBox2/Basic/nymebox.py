@@ -14,7 +14,7 @@ class NymeBox_Core:
         import glob
         import sys
 
-        nymeLogFile = './FTP_Progress.txt'
+        nymeLogFile = './Basic/FTP_Progress.txt'
         nymeLog    = open(nymeLogFile, 'r+')
         #FTPUser = 'ftpuser'
         #FTPPassword = 'ftpuser'
@@ -65,10 +65,14 @@ class NymeBox_Core:
             nymeLog.close()
             return
 
+        nymeLog.write("Connected to: " + config.FtpURL + "\n")
         ftp.login(config.FTPUser,config.FTPPassword)
         ftp.cwd(config.DestDir)
 
+        nymeLog.write("List of files to send: " + str(mediaList) + "\n")
+
         for eachPic in mediaList:
+            nymeLog.write("Preparing to send: " + eachPic + "\n")
             if eachPic != "":
                 file_name, file_extension = os.path.splitext(eachPic)
                 eachPicDest = str(time) + "-" + str(n) + file_extension
@@ -78,7 +82,14 @@ class NymeBox_Core:
                 file.close()
                 nymeLog.write(ftp_status)
                 if process_mode == 'PROD':
-                    os.rename(eachPic,eachPic + '.moved')                
+                    nymeLog.write("Process Mode is " + process_mode + ". Moving " + eachPic + ".\n")
+                    os.rename(eachPic,eachPic + '.moved')
+                else:
+                    nymeLog.write("Process Mode is " + process_mode + ". NOT Moving " + eachPic + ".\n")
+            else:
+                nymeLog.write("No more files to move.\n")
+                    
+                                    
 
             n=n+1
         ftp.quit()
