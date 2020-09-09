@@ -13,11 +13,11 @@ def index(request):
         return HttpResponse("Hello World!")
 
 def nymebox_home(request):
-        config = ConfigItem.Manager.raw('SELECT FtpURL, FileTypeList, FTPUser, FTPPassword, SourceDir, DestDir,ProcMode FROM basic_configitem WHERE ProcMode = %s', [app_mode])
-        if config != None:
-               print("the config type is: " + str(type(config)) + "\n")
-               print("the config type is: " + config[0].FtpURL + "\n")
-               return render(request, 'nymebox_home.html', {'config':config[0]})
+        #config = ConfigItem.Manager.raw('SELECT FtpURL, FileTypeList, FTPUser, FTPPassword, SourceDir, DestDir,ProcMode FROM basic_configitem WHERE ProcMode = %s', [app_mode])
+        #if config != None:
+        #       print("the config type is: " + str(type(config)) + "\n")
+        #       print("the config type is: " + config[0].FtpURL + "\n")
+        return render(request, 'nymebox_home.html')#, {'config':config[0]})
 
 def updatefile(request):
         return render(request,'test_log.html')
