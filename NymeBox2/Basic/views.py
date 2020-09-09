@@ -25,7 +25,7 @@ def FTPLog(request):
         return render(request,'nymebox_logfile.html',{'output':fileContents})
         
 @csrf_protect
-def do_ftp(request):
+def do_ftp(self, request):
         #return HttpResponse("Trying to do an FTP!")
         config = ConfigItem.ProcMode.get(pk=1)
         NymeBox_Core.do_ftp(self, config)
