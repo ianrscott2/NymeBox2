@@ -7,11 +7,13 @@ from .nymebox import NymeBox_Core
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
 
+app_mode = "TEST"
+
 def index(request):
         return HttpResponse("Hello World!")
 
 def nymebox_home(request):
-        config = ConfigItem.Manager.raw('SELECT * FROM basic_configitem')
+        config = ConfigItem.Manager.raw('SELECT * FROM basic_configitem WHERE ProcMode = %s', [app_mode])
         print("the config type is: " + str(type(config)) + "\n")
         print("the config type is: " + config[0].FtpURL + "\n")
         return render(request, 'nymebox_home.html', {'config':config[0]})
