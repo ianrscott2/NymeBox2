@@ -14,7 +14,7 @@ class NymeBox_Core:
         import glob
         import sys
 
-        nymeLogFile = './Basic/FTP_Progress.txt'
+        nymeLogFile = './/Basic//FTP_Progress.txt'
         nymeLog    = open(nymeLogFile, 'r+')
         #FTPUser = 'ftpuser'
         #FTPPassword = 'ftpuser'

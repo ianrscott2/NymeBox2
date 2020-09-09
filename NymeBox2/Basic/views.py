@@ -18,7 +18,7 @@ def updatefile(request):
         return render(request,'test_log.html')
 
 def FTPLog(request):
-        outputfile = open("Basic\FTP_Progress.txt", "r")
+        outputfile = open("Basic//FTP_Progress.txt", "r")
         fileContents=outputfile.read()
         outputfile.close()
         return render(request,'nymebox_logfile.html',{'output':fileContents})
@@ -29,7 +29,7 @@ def do_ftp(request):
         config = ConfigItem.objects.get(pk=1)
         doing_ftp = NymeBox_Core.do_ftp(config)
         print(doing_ftp)
-        outputfile = open("Basic\FTP_Progress.txt", "r")
+        outputfile = open("Basic//FTP_Progress.txt", "r")
         fileContents=outputfile.read()
         return render(request,'nymebox_output.html',{'output':fileContents})
 
