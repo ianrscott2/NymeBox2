@@ -11,8 +11,8 @@ def index(request):
         return HttpResponse("Hello World!")
 
 def nymebox_home(request):
-        #config = ConfigItem
-        return render(request, 'nymebox_home.html', {'config':ConfigItem.pk[1]})
+        config = ConfigItem.objects.get(pk=1)
+        return render(request, 'nymebox_home.html', {'config':config})
 
 def updatefile(request):
         return render(request,'test_log.html')
@@ -26,8 +26,8 @@ def FTPLog(request):
 @csrf_protect
 def do_ftp(request):
         #return HttpResponse("Trying to do an FTP!")
-        #config = ConfigItem
-        NymeBox_Core.do_ftp(ConfigItem.pk[1])
+        config = ConfigItem.objects.get(pk=1)
+        NymeBox_Core.do_ftp(config)
         outputfile = open("Basic//FTP_Progress.txt", "r")
         fileContents=outputfile.read()
         return render(request,'nymebox_output.html',{'output':fileContents})

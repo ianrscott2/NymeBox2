@@ -16,14 +16,11 @@ class NymeBox_Core:
 
         nymeLogFile = './/Basic//FTP_Progress.txt'
         nymeLog    = open(nymeLogFile, 'r+')
-        #FTPUser = 'ftpuser'
-        #FTPPassword = 'ftpuser'
         #SourceDir = '/var/www/NymeBox/SDCARD/**'
         #SourceDir = 'C:\\Users\\Ian\\Pictures\\NymeBox\\'
         process_mode = 'TEST'
         #process_mode = 'PROD'
-        #DestDir = 'NymeBox/'
-        #FtpURL = 'trek'
+
 
         time = datetime.datetime.utcnow()
         nymeLog.write(str(time) + "\n")
