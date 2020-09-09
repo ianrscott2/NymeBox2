@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_protect
 from django.http import HttpResponse
-from .models import ConfigItem
+from Basic.models import ConfigItem
 from .nymebox import NymeBox_Core
 
 from django.contrib.auth.forms import UserCreationForm
@@ -12,6 +12,7 @@ def index(request):
 
 def nymebox_home(request):
         config = ConfigItem.ProcMode.get(pk=1)
+        print(type(config))
         return render(request, 'nymebox_home.html', {'config':config})
 
 def updatefile(request):
