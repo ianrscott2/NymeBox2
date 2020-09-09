@@ -11,9 +11,10 @@ def index(request):
         return HttpResponse("Hello World!")
 
 def nymebox_home(request):
-        config = ConfigItem.ProcMode.raw('SELECT ProcMode, FtpURL FROM basic_configitem')
-        print("the config type is: " + str(type(config)))
-        return render(request, 'nymebox_home.html', {'config':config})
+        config = ConfigItem.Manager.raw('SELECT * FROM basic_configitem')
+        print("the config type is: " + str(type(config)) + "\n")
+        print("the config type is: " + config[0].FtpURL + "\n")
+        return render(request, 'nymebox_home.html', {'config':config[0]})
 
 def updatefile(request):
         return render(request,'test_log.html')
@@ -27,7 +28,7 @@ def FTPLog(request):
 @csrf_protect
 def do_ftp(request):
         #return HttpResponse("Trying to do an FTP!")
-        config = ConfigItem.ProcMode.get(pk=1)
+        config = ConfigItem.objects.get(pk=1)
         ftping = NymeBox_Core(config)
         ftping.do_ftp()
         outputfile = open("Basic//FTP_Progress.txt", "r")

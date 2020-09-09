@@ -18,7 +18,6 @@ class NymeBox_Core:
         nymeLog    = open(nymeLogFile, 'w')
         #SourceDir = '/var/www/NymeBox/SDCARD/**'
         #SourceDir = 'C:\\Users\\Ian\\Pictures\\NymeBox\\'
-        process_mode = 'TEST'
         #process_mode = 'PROD'
 
 
@@ -57,13 +56,13 @@ class NymeBox_Core:
         n=0
         try:
             nymeLog.write("Executing FTP Connection to: " + self.config.FtpURL + "\n")
-            ftp = ftplib.FTP(self.FtpURL)
+            ftp = ftplib.FTP(self.config.FtpURL)
         except:
             nymeLog.write("Unable to connect to FTP Server " + self.config.FtpURL + ", exiting...\n")
             nymeLog.close()
             return
 
-        nymeLog.write("Connected to: " + self.FtpURL + "\n")
+        nymeLog.write("Connected to: " + self.config.FtpURL + "\n")
         ftp.login(self.config.FTPUser,self.config.FTPPassword)
         ftp.cwd(self.config.DestDir)
 
@@ -79,11 +78,11 @@ class NymeBox_Core:
                 ftp_status = ftp.storbinary('STOR ' + eachPicDest, fp=file)
                 file.close()
                 nymeLog.write(ftp_status)
-                if process_mode == 'PROD':
-                    nymeLog.write("Process Mode is " + process_mode + ". Moving " + eachPic + ".\n")
+                if self.config.ProcMode == 'PROD':
+                    nymeLog.write("Process Mode is " + self.config.ProcMode + ". Moving " + eachPic + ".\n")
                     os.rename(eachPic,eachPic + '.moved')
                 else:
-                    nymeLog.write("Process Mode is " + process_mode + ". NOT Moving " + eachPic + ".\n")
+                    nymeLog.write("Process Mode is " + self.config.ProcMode + ". NOT Moving " + eachPic + ".\n")
             else:
                 nymeLog.write("No more files to move.\n")
                     
