@@ -8,6 +8,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
 
 app_mode = "TEST"
+FTPLogFile = "Basic//FTP_Progress.txt"
+FTPCheckFile = "Basic//FTP_FileCheck.txt"
 
 def index(request):
         return HttpResponse("Hello World!")
@@ -19,8 +21,16 @@ def nymebox_home(request):
 def updatefile(request):
         return render(request,'test_log.html')
 
+def ftpCheck(request):
+        config = ConfigItem.Manager.raw('SELECT * FROM basic_configitem WHERE ProcMode = %s', [app_mode])
+        ftping = NymeBox_Check(config[0])
+        ftping.check_ftp_files()
+        outputfile = open(FTPLogFile, "r")
+        fileContents=outputfile.read()
+        return render(request,'nymebox_ftpcheck.html',{'output':fileContents})
+
 def FTPLog(request):
-        outputfile = open("Basic//FTP_Progress.txt", "r")
+        outputfile = open(FTPLogFile, "r")
         fileContents=outputfile.read()
         outputfile.close()
         return render(request,'nymebox_logfile.html',{'output':fileContents})
@@ -31,7 +41,7 @@ def do_ftp(request):
         config = ConfigItem.Manager.raw('SELECT * FROM basic_configitem WHERE ProcMode = %s', [app_mode])
         ftping = NymeBox_Core(config[0])
         ftping.do_ftp()
-        outputfile = open("Basic//FTP_Progress.txt", "r")
+        outputfile = open(FTPLogFile, "r")
         fileContents=outputfile.read()
         return render(request,'nymebox_output.html',{'output':fileContents})
 
@@ -41,6 +51,6 @@ def config_by_id(request, config_id):
         #return HttpResponse(f"Config Field: {config.field}, Value: {config.value}")
 
 def last_results(request):
-        outputfile = open("Basic//FTP_Progress.txt", "r")
+        outputfile = open(FTPLogFile, "r")
         fileContents=outputfile.read()
         return render(request,'nymebox_lastlog.html',{'output':fileContents})

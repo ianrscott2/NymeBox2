@@ -10,4 +10,5 @@ urlpatterns = [
     path('last_results/', views.last_results, name='last_results'),
     path('ConfigItem/<int:config_id>', views.config_by_id, name='config_by_id'),
     path('do_ftp/FTPLog', views.FTPLog, name='FTPLog'),
+    path('ftpCheck/', views.ftpCheck, name='ftpCheck'),
 ]
