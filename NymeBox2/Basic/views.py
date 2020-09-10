@@ -3,6 +3,7 @@ from django.views.decorators.csrf import csrf_protect
 from django.http import HttpResponse
 from Basic.models import ConfigItem
 from .nymebox import NymeBox_Core
+from .nymebox_ftpfilecheck import NymeBox_Check
 
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
