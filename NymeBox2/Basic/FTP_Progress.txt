@@ -1,168 +1,56 @@
-2020-09-10 14:58:08.834139
+2020-09-10 20:29:52.918721
 FTP User is:         ftpuser
 Destination Dir is:  NymeBox/
 Source Dir is:       C:\\Users\\Ian\\Pictures\\NymeBox\\
 File Type List is:   *.GIF,*.JPG,*.NEF
-Udpated FTP URL is:  qlink.to/TREK3
-FTP URL is:          trek
-Looking for fileType *.GIF
-Looking for fileType *.JPG
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9670.jpg in <generator object _iglob at 0x051BFED0>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9670.jpg in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg in <generator object _iglob at 0x051BFED0>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking for fileType *.NEF
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0169.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0169.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0196.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0196.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0208.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0208.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0232.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0232.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0259.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0259.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0292.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0292.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0473.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0473.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0529.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0529.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0546.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0546.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0553.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0553.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0618.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0618.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0642.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0642.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0727.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0727.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0793.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0793.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0797.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0797.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0843.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0843.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0899.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0899.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0927.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0927.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0951.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0951.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0958.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0958.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0972.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0972.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9613.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9613.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9679.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9679.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9750.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9750.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9828.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9828.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9849.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9849.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9908.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9908.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9949.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9949.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9985.NEF in <generator object _iglob at 0x051BFF08>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9985.NEF in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-Executing FTP Connection to: trek
-Connected to: trek
-List of files to send: ['C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_9670.jpg', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\MidnightMassacre2019.jpg', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0169.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0196.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0208.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0232.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0259.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0292.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0473.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0529.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0546.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0553.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0618.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0642.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0727.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0793.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0797.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0843.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0899.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0927.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0951.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0958.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_0972.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_9613.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_9679.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_9750.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_9828.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_9849.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_9908.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_9949.NEF', 'C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\DSC_9985.NEF']
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9670.jpg
-1 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9670 to NymeBox//10Sep2020145808-0.jpg
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9670.jpg.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg
-2 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019 to NymeBox//10Sep2020145808-1.jpg
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0169.NEF
-3 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0169 to NymeBox//10Sep2020145808-2.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0169.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0196.NEF
-4 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0196 to NymeBox//10Sep2020145808-3.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0196.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0208.NEF
-5 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0208 to NymeBox//10Sep2020145808-4.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0208.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0232.NEF
-6 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0232 to NymeBox//10Sep2020145808-5.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0232.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0259.NEF
-7 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0259 to NymeBox//10Sep2020145808-6.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0259.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0292.NEF
-8 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0292 to NymeBox//10Sep2020145808-7.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0292.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0473.NEF
-9 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0473 to NymeBox//10Sep2020145808-8.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0473.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0529.NEF
-10 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0529 to NymeBox//10Sep2020145808-9.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0529.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0546.NEF
-11 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0546 to NymeBox//10Sep2020145808-10.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0546.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0553.NEF
-12 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0553 to NymeBox//10Sep2020145808-11.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0553.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0618.NEF
-13 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0618 to NymeBox//10Sep2020145808-12.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0618.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0642.NEF
-14 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0642 to NymeBox//10Sep2020145808-13.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0642.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0727.NEF
-15 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0727 to NymeBox//10Sep2020145808-14.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0727.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0793.NEF
-16 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0793 to NymeBox//10Sep2020145808-15.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0793.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0797.NEF
-17 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0797 to NymeBox//10Sep2020145808-16.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0797.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0843.NEF
-18 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0843 to NymeBox//10Sep2020145808-17.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0843.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0899.NEF
-19 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0899 to NymeBox//10Sep2020145808-18.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0899.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0927.NEF
-20 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0927 to NymeBox//10Sep2020145808-19.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0927.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0951.NEF
-21 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0951 to NymeBox//10Sep2020145808-20.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0951.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0958.NEF
-22 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0958 to NymeBox//10Sep2020145808-21.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0958.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0972.NEF
-23 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0972 to NymeBox//10Sep2020145808-22.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0972.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9613.NEF
-24 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9613 to NymeBox//10Sep2020145808-23.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9613.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9679.NEF
-25 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9679 to NymeBox//10Sep2020145808-24.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9679.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9750.NEF
-26 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9750 to NymeBox//10Sep2020145808-25.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9750.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9828.NEF
-27 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9828 to NymeBox//10Sep2020145808-26.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9828.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9849.NEF
-28 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9849 to NymeBox//10Sep2020145808-27.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9849.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9908.NEF
-29 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9908 to NymeBox//10Sep2020145808-28.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9908.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9949.NEF
-30 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9949 to NymeBox//10Sep2020145808-29.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9949.NEF.
-Preparing to send: C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9985.NEF
-31 of 31 : Trying to send C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9985 to NymeBox//10Sep2020145808-30.NEF
-226 Transfer completeProcess Mode is TEST. NOT Moving C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9985.NEF.
+The list to FTP is: 
+
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9670.jpg
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\MidnightMassacre2019.jpg
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0553.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0618.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0642.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0727.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0793.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0797.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0843.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0899.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0169.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0196.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0208.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0232.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0259.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0292.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0473.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0529.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0546.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0553.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0618.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0642.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0727.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0793.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0797.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0843.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0899.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0927.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0951.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0958.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0972.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9613.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9679.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9750.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9828.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9849.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9908.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9949.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9985.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0553.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0618.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0642.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0727.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0793.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0797.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0843.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0899.NEF
+Executing FTP Connection to: qlink.to/TREK3
+Unable to connect to FTP Server qlink.to/TREK3, exiting...

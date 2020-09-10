@@ -3,7 +3,6 @@ from django.views.decorators.csrf import csrf_protect
 from django.http import HttpResponse
 from Basic.models import ConfigItem
 from .nymebox import NymeBox_Core
-from .nymebox_ftpfilecheck import NymeBox_Check
 
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
@@ -25,8 +24,8 @@ def updatefile(request):
 
 def ftpCheck(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
-        ftping = NymeBox_Check(config[0])
-        ftping.check_ftp_files()
+        getftp = NymeBox_Core(config[0])
+        fileList = getftp.get_ftp_files()
         outputfile = open(FTPCheckFile, "r")
         fileContents=outputfile.read()
         return render(request,'nymebox_ftpcheck.html',{'output':fileContents})
