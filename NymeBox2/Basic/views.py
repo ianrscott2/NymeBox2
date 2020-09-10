@@ -26,7 +26,7 @@ def ftpCheck(request):
         config = ConfigItem.Manager.raw('SELECT * FROM basic_configitem WHERE ProcMode = %s', [app_mode])
         ftping = NymeBox_Check(config[0])
         ftping.check_ftp_files()
-        outputfile = open(FTPLogFile, "r")
+        outputfile = open(FTPCheckFile, "r")
         fileContents=outputfile.read()
         return render(request,'nymebox_ftpcheck.html',{'output':fileContents})
 

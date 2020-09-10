@@ -1,8 +1,8 @@
-2020-09-10 14:37:24.453064
+2020-09-10 14:38:47.128008
 Source Dir is:       C:\\Users\\Ian\\Pictures\\NymeBox\\
 File Type List is:   *.GIF,*.JPG
 Looking for fileType *.GIF
 Looking for fileType *.JPG
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg in <generator object _iglob at 0x051AD6B8>
+Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg in <generator object _iglob at 0x051AD840>
 Found the file C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
 List of files to send: ['C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\MidnightMassacre2019.jpg']
