@@ -1,8 +1,38 @@
-2020-09-10 14:38:47.128008
+2020-09-10 14:57:52.638382
+
 Source Dir is:       C:\\Users\\Ian\\Pictures\\NymeBox\\
-File Type List is:   *.GIF,*.JPG
-Looking for fileType *.GIF
-Looking for fileType *.JPG
-Looking at file C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg in <generator object _iglob at 0x051AD840>
-Found the file C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg in the directory C:\\Users\\Ian\\Pictures\\NymeBox\\
-List of files to send: ['C:\\\\Users\\\\Ian\\\\Pictures\\\\NymeBox\\MidnightMassacre2019.jpg']
+File Type List is:   *.GIF,*.JPG,*.NEF
+
+List of files to send: 
+
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9670.jpg
+C:\\Users\\Ian\\Pictures\\NymeBox\MidnightMassacre2019.jpg
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0169.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0196.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0208.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0232.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0259.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0292.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0473.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0529.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0546.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0553.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0618.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0642.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0727.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0793.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0797.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0843.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0899.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0927.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0951.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0958.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0972.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9613.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9679.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9750.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9828.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9849.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9908.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9949.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_9985.NEF

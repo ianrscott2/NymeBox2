@@ -20,7 +20,7 @@ class NymeBox_Check:
         #process_mode = 'PROD'
 
         time = datetime.datetime.utcnow()
-        nymeLog.write(str(time) + "\n")
+        nymeLog.write(str(time) + "\n\n")
         time = str(time.strftime("%d%b%Y%H%M%S"))
         
         nymeLog.write("Source Dir is:       " + self.config.SourceDir + "\n")
@@ -31,19 +31,19 @@ class NymeBox_Check:
 
         if self.config.FileTypeList != "":
             for fileType in self.config.FileTypeList.split(","):
-                nymeLog.write("Looking for fileType " + fileType + "\n")
+                #nymeLog.write("Looking for fileType " + fileType + "\n")
                 mediaFileList = glob.iglob(self.config.SourceDir + fileType, recursive=True)
                 for filename in mediaFileList:
-                    nymeLog.write("Looking at file " + filename + " in " + str(mediaFileList) + "\n")
+                    #nymeLog.write("Looking at file " + filename + " in " + str(mediaFileList) + "\n")
                     if re.search("." + fileType + '$', filename, re.IGNORECASE):
-                        nymeLog.write("Found the file " + filename + " in the directory " + self.config.SourceDir + "\n")
+                        #nymeLog.write("Found the file " + filename + " in the directory " + self.config.SourceDir + "\n")
                         mediaListNum += 1
                         mediaList.append(filename)
                     else:
                         nymeLog.write("Didn't find any " + fileType + " media files in " + self.config.SourceDir + "\n")
 
-        nymeLog.write("List of files to send: " + str(mediaList) + "\n")
-
+        nymeLog.write("\nList of files to send: \n\n")
+        nymeLog.writelines("%s\n" % mediaFile for mediaFile in mediaList)
 
         nymeLog.close()
         
