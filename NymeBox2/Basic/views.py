@@ -3,11 +3,15 @@ from django.views.decorators.csrf import csrf_protect
 from django.http import HttpResponse
 from Basic.models import ConfigItem
 from .nymebox import NymeBox_Core
-
+import socket
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
 
-app_mode = "TEST"
+if 'nymebox' in socket.gethostname():
+        app_mode = "PROD"
+else:
+        app_mode = "TEST"
+
 FTPLogFile = "Basic//FTP_Progress.txt"
 FTPCheckFile = "Basic//FTP_FileCheck.txt"
 configQuery = "SELECT * FROM basic_configitem WHERE ProcMode = %s"

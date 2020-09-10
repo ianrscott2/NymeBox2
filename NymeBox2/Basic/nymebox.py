@@ -71,6 +71,7 @@ class NymeBox_Core:
         ftp.login(self.config.FTPUser,self.config.FTPPassword)
         ftp.cwd(self.config.DestDir)
 
+        n=0
         for eachPic in filesToFTP:
             nymeLog.write("Preparing to send: " + eachPic + "\n")
             if eachPic != "":
@@ -88,9 +89,6 @@ class NymeBox_Core:
                     nymeLog.write("Process Mode is " + self.config.ProcMode + ". NOT Moving " + eachPic + ".\n")
             else:
                 nymeLog.write("No more files to move.\n")
-                    
-                                    
-
             n=n+1
         ftp.quit()
         nymeLog.close()
