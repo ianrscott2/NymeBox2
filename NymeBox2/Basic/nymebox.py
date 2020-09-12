@@ -11,8 +11,9 @@ class NymeBox_Core:
         import glob
         import sys
         from pathlib import Path
+        from .config import LOG_FILE_FOLDER
 
-        nymeLogFile = './/Basic//FTP_FileCheck.txt'
+        nymeLogFile = LOG_FILE_FOLDER + 'FTP_FileCheck.txt'
         nymeLog    = open(nymeLogFile, 'w')
 
         mediaList = []
@@ -37,8 +38,9 @@ class NymeBox_Core:
         import re
         import glob
         import sys
-
-        nymeLogFile = './/Basic//FTP_Progress.txt'
+        from .config import LOG_FILE_FOLDER
+        
+        nymeLogFile = LOG_FILE_FOLDER + 'FTP_Progress.txt'
         nymeLog    = open(nymeLogFile, 'w')
         
         time = datetime.datetime.utcnow()

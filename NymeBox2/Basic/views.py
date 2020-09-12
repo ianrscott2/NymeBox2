@@ -7,13 +7,18 @@ import socket
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
 
+from .config import LOG_FILE_FOLDER
+
+
 if 'nymebox' in socket.gethostname():
         app_mode = "PROD"
 else:
         app_mode = "TEST"
 
-FTPLogFile = "Basic//FTP_Progress.txt"
-FTPCheckFile = "Basic//FTP_FileCheck.txt"
+#FTPLogFile = "Basic//FTP_Progress.txt"
+FTPLogFile = LOG_FILE_FOLDER + 'FTP_Progress.txt'
+FTPCheckFile = LOG_FILE_FOLDER + 'FTP_FileCheck.txt'
+
 configQuery = "SELECT * FROM basic_configitem WHERE ProcMode = %s"
 
 def index(request):
