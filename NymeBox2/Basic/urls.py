@@ -13,7 +13,4 @@ urlpatterns = [
     path('ConfigItem/<int:config_id>', views.config_by_id, name='config_by_id'),
     path('do_ftp/FTPLog', views.FTPLog, name='FTPLog'),
     path('ftpCheck/', views.ftpCheck, name='ftpCheck'),
-    path(r'^pics/(?P<path>.*)$', 'django.views.static.serve',
-                 {'document_root': config.PICS_FILE_FOLDER}),
-              ))
 ]

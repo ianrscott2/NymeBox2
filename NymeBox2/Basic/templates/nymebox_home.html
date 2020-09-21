@@ -38,18 +38,19 @@ $(document).ready(function(){
   });
 });
 </script>
-<p></p>
-<body style="color:darkblue;font-size: small;"></body>
-FTP Target:  {{ config.FtpURL }}
-<br>
-File Types: {{ config.FileTypeList }}
-<br>
-User: {{ config.FTPUser }}
-<br>
-Source Dir: {{ config.SourceDir }}
-<br>
-Dest Dir: {{ config.DestDir }}
 
+<body style="color:darkblue;font-size: small;"></body>
+<table>
+<tr><td>FTP Target: </td><td> {{ config.FtpURL }}</td></tr>
+
+<tr><td>File Types: </td><td>{{ config.FileTypeList }}</td></tr>
+
+<tr><td>User: </td><td>{{ config.FTPUser }}</td></tr>
+
+<tr><td>Source Dir: </td><td>{{ config.SourceDir }}</td></tr>
+
+<tr><td>Dest Dir: </td><td>{{ config.DestDir }}</td></tr>
+</table>
 <form action="do_ftp/" name="FTP" method="POST">
   {% csrf_token %}
   <button type="submit" value="Send via FTP" class="FTP" id="FTPButton" style="display: {{ ftpbutton }};"> FTP Files </button> 

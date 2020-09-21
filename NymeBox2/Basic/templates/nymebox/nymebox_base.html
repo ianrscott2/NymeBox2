@@ -1,33 +1,35 @@
 <!DOCTYPE HTML>
+
+{% load static %} 
+
 <html>
 <title>Welcome to NymeBox</title>
 
 <body>
   <table>
     <tr>
-    <td width="75">
-    <a href="/"><img src="{{ MEDIA_URL }}/home.jpg" />
-    Home
-    </a>
+    <td width="75" align="center">
+    <a href="/"><img src="{% static "home.png" %}" width="40"/>
     </td>
     </td>
-    <td width="75">
+    <td width="75" align="center">
     <a href="/ftpCheck">
     Check for FTP Files
     </a>
     </td>
-    <td width="75">
+    <td width="75"align="center">
     <a href="/last_results">
     Last Results
     </a>
     </td>
-    <td width="75">
+    <td width="75" align="center">
     <a href="/admin/Basic/configitem/1/change/">
-    Admin
+      <img src="{% static "admin.png" %}" width="40"/>
     </a>
     </td>
     </tr>
 </table>
+<hr width="300" align="left">
 {% block content %}
 
 {% endblock %}
