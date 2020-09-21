@@ -26,7 +26,15 @@ def index(request):
 
 def nymebox_home(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
-        return render(request, 'nymebox_home.html', {'config':config[0]})
+        #return render(request, 'nymebox_home.html', {'config':config[0]})
+        getftp = NymeBox_Core(config[0])
+        #fileList = getftp.get_ftp_files()
+        outputfile = open(FTPCheckFile, "r")
+        fileContents=outputfile.read()
+        #return render(request, 'nymebox_home.html', {'config':config[0],'output':fileContents})
+        render(request, 'nymebox_home.html', {'config':config[0],'output':fileContents})
+        fileList = getftp.get_ftp_files()
+        return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'default', 'resetbutton':'none'})
 
 def updatefile(request):
         return render(request,'test_log.html')
@@ -53,8 +61,8 @@ def do_ftp(request):
         ftping.do_ftp()
         outputfile = open(FTPLogFile, "r")
         fileContents=outputfile.read()
-        return render(request,'nymebox_output.html',{'output':fileContents})
-
+        return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'none', 'resetbutton':'default'})
+        
 def config_by_id(request, config_id):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
         return render(request, 'config_details.html', {'config':config[config_id]})

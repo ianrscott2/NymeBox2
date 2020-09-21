@@ -47,10 +47,10 @@ class NymeBox_Core:
         nymeLog.write(str(time) + "\n")
         time = str(time.strftime("%d%b%Y%H%M%S"))
                 
-        nymeLog.write("FTP User is:         " + self.config.FTPUser + "\n")
-        nymeLog.write("Destination Dir is:  " + self.config.DestDir + "\n")
-        nymeLog.write("Source Dir is:       " + self.config.SourceDir + "\n")
-        nymeLog.write("File Type List is:   " + self.config.FileTypeList + "\n")
+        #nymeLog.write("FTP User is:         " + self.config.FTPUser + "\n")
+        #nymeLog.write("Destination Dir is:  " + self.config.DestDir + "\n")
+        #nymeLog.write("Source Dir is:       " + self.config.SourceDir + "\n")
+        #nymeLog.write("File Type List is:   " + self.config.FileTypeList + "\n")
 
         self.config.FtpURL = self.config.FtpURL.replace('ftp://', '')
         
@@ -58,14 +58,16 @@ class NymeBox_Core:
         #getftp = NymeBox_Core(config[0])
         filesToFTP = self.get_ftp_files()
          
-        nymeLog.writelines("\nThe list to FTP is: \n\n")
-        nymeLog.writelines("%s\n" % mediaFile for mediaFile in filesToFTP)
+        #nymeLog.writelines("\nThe list to FTP is: \n\n")
+        #nymeLog.writelines("%s\n" % mediaFile for mediaFile in filesToFTP)
 
         try:
             nymeLog.write("Executing FTP Connection to: " + self.config.FtpURL + "\n")
+            print("Executing FTP Connection to: " + self.config.FtpURL + "\n")
             ftp = ftplib.FTP(self.config.FtpURL)
         except:
             nymeLog.write("Unable to connect to FTP Server " + self.config.FtpURL + ", exiting...\n")
+            print("Unable to connect to FTP Server " + self.config.FtpURL + ", exiting...\n")
             nymeLog.close()
             return
 
@@ -86,9 +88,11 @@ class NymeBox_Core:
                 nymeLog.write(ftp_status)
                 if self.config.ProcMode == 'PROD':
                     nymeLog.write("Process Mode is " + self.config.ProcMode + ". Moving " + eachPic + ".\n")
+                    print("Process Mode is " + self.config.ProcMode + ". Moving " + eachPic + ".\n")
                     os.rename(eachPic,eachPic + '.moved')
                 else:
                     nymeLog.write("Process Mode is " + self.config.ProcMode + ". NOT Moving " + eachPic + ".\n")
+                    print("Process Mode is " + self.config.ProcMode + ". NOT Moving " + eachPic + ".\n")
             else:
                 nymeLog.write("No more files to move.\n")
             n=n+1

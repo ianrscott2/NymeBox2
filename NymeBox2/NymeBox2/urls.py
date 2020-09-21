@@ -19,5 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('', include('Basic.urls')),
     path('app/', include('Basic.urls')),
+    path('nymebox/', include('Basic.urls')),
     path('admin/', admin.site.urls),
 ]

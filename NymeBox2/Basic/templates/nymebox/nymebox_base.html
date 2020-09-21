@@ -1,26 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 <title>Welcome to NymeBox</title>
-<style>
-.FTP{
-  background-color: """ + ftpStatus[0] + """;
-  border: none;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  width: 250px;
-}
-</style>
+
 <body>
   <table>
     <tr>
     <td width="75">
-    <a href="/">
+    <a href="/"><img src="{{ MEDIA_URL }}/home.jpg" />
     Home
     </a>
     </td>
@@ -37,7 +23,7 @@
     </td>
     <td width="75">
     <a href="/admin/Basic/configitem/1/change/">
-    Administration
+    Admin
     </a>
     </td>
     </tr>

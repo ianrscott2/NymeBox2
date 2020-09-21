@@ -2,34 +2,63 @@
 
 {% block content %}
 
-<p></p>
-
-Send files to  {{ config.FtpURL }}
-<p></p>
-Configured File types are:
-
-{{ config.FileTypeList }}
-<P>
 <style>
-.FTP{
-background-color: green;
-border: none;
-color: black;
-padding: 15px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-margin: 4px 2px;
-cursor: pointer;
-width: 250px;
-}
-            
-</style>
+  .FTP{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 300px;
+  }
+              
+  </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+setInterval(function() {
+    $('#div1').load('FTPLog');
+    //$('#div1').
+}, 1000);
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").load("FTPLog", function(responseTxt, statusTxt, xhr){
+      //if(statusTxt == "success")
+      //  alert("External content loaded successfully!");
+      if(statusTxt == "error")
+        alert("Error: " + xhr.status + ": " + xhr.statusText);
+    });
+  });
+});
+</script>
+<p></p>
+<body style="color:darkblue;font-size: small;"></body>
+FTP Target:  {{ config.FtpURL }}
+<br>
+File Types: {{ config.FileTypeList }}
+<br>
+User: {{ config.FTPUser }}
+<br>
+Source Dir: {{ config.SourceDir }}
+<br>
+Dest Dir: {{ config.DestDir }}
 
 <form action="do_ftp/" name="FTP" method="POST">
-    {% csrf_token %}
-	<input type="submit" value="Send via FTP" class="FTP" > 
+  {% csrf_token %}
+  <button type="submit" value="Send via FTP" class="FTP" id="FTPButton" style="display: {{ ftpbutton }};"> FTP Files </button> 
+</form>
+<form action="/" name="Reset" method="POST">
+  {% csrf_token %}
+  <button type="submit" value="Reset" class="FTP" id="ResetButton"  style="display: {{ resetbutton }} ;"> Reset </button>
 </form>
 
+<div id="div1">Loading Log File to show progress...</div>
+</body>
 {% endblock %}

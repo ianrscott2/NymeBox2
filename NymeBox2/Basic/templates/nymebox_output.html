@@ -7,13 +7,13 @@
 
 setInterval(function() {
     $('#div1').load('FTPLog');
-}, 100);
+}, 1000);
 
 $(document).ready(function(){
   $("button").click(function(){
     $("#div1").load("FTPLog", function(responseTxt, statusTxt, xhr){
-      if(statusTxt == "success")
-        alert("External content loaded successfully!");
+      //if(statusTxt == "success")
+      //  alert("External content loaded successfully!");
       if(statusTxt == "error")
         alert("Error: " + xhr.status + ": " + xhr.statusText);
     });
