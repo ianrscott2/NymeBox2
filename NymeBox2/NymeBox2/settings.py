@@ -122,7 +122,7 @@ USE_TZ = True
 STATIC_PATH = os.path.join(BASE_DIR,'static')
 
 STATIC_URL = '/static/'
-
+LOG_PATH
 STATICFILES_DIRS = (
     STATIC_PATH,
 )

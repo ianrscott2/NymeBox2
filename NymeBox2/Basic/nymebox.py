@@ -23,7 +23,6 @@ class NymeBox_Core:
 
         nymeLogFile = LOG_FILE_FOLDER + 'FTP_FileCheck.txt'
         nymeLog    = open(nymeLogFile, 'w')
-        nymeLog    = open(nymeLogFile, 'a')
 
         mediaList = []
 
@@ -53,7 +52,6 @@ class NymeBox_Core:
         FTPLogFile = LOG_FILE_FOLDER + 'FTP_Progress.txt'
         nymeLog    = open(FTPLogFile, 'w')
         
-
         time = datetime.datetime.utcnow()
         nymeLog.write(str(time) + "\n")
         time = str(time.strftime("%d%b%Y%H%M%S"))
@@ -97,7 +95,7 @@ class NymeBox_Core:
                 file_name, file_extension = os.path.splitext(eachPic)
                 eachPicDest = str(time) + "-" + str(n) + file_extension
                 file = open(eachPic, 'rb')
-                ftp_status = ftp.storbinary('STOR ' + eachPicDest, fp=file)
+                ftp.storbinary('STOR ' + eachPicDest, fp=file)
                 file.close()
                 #nymeLog.write(ftp_status)
                 justFileName = os.path.basename(file_name)
