@@ -19,6 +19,7 @@ else:
         app_mode = "TEST"
 
 FTPLogFile = LOG_FILE_FOLDER + 'FTP_Progress.txt'
+FTPLastLogFile = LOG_FILE_FOLDER + 'FTP_Progress.txt' + '.last'
 FTPCheckFile = LOG_FILE_FOLDER + 'FTP_FileCheck.txt'
 
 configQuery = "SELECT * FROM basic_configitem WHERE ProcMode = %s"
@@ -29,17 +30,13 @@ def index(request):
 def nymebox_home(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
         getftp = NymeBox_Core(config[0])
-        if path.exists(FTPLogFile + '.last'):
-                os.remove(FTPLogFile + '.last')
-        nymeLog = open(FTPLogFile, 'x')
-        if path.exists(FTPLogFile):
-                os.rename(FTPLogFile, FTPLogFile + '.last')
-        #fileContents=outputfile.read()
-        #fileList = getftp.get_ftp_files()
+        if not path.exists(FTPLastLogFile):
+                open(FTPLastLogFile, 'x')
+        if not path.exists(FTPLogFile):
+                open(FTPLogFile, 'x')
+        else:
+                os.rename(FTPLogFile, FTPLastLogFile)
         return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'default', 'resetbutton':'none'})
-
-def updatefile(request):
-        return render(request,'test_log.html')
 
 def ftpCheck(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
@@ -73,6 +70,9 @@ def config_by_id(request, config_id):
         #return HttpResponse(f"Config Field: {config.field}, Value: {config.value}")
 
 def last_results(request):
-        outputfile = open(FTPLogFile + '.last', "r")
+        if not path.exists(FTPLastLogFile):
+                open(FTPLastLogFile, 'x')
+        outputfile = open(FTPLastLogFile, "r")
         fileContents=outputfile.read()
+        outputfile.close()
         return render(request,'nymebox_lastlog.html',{'output':fileContents})
