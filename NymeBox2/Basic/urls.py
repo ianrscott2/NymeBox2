@@ -6,7 +6,6 @@ from . import views
 urlpatterns = [
     path('', views.nymebox_home, name='nymebox_home'),
     path('FTPLog/', views.FTPLog, name='FTPLog'),
-    path('ftpCheck_home/', views.nymebox_home, name='ftpCheck_home'),
     path('app/', views.index, name='index'),
     path('do_ftp/', views.do_ftp, name='do_ftp'),
     path('last_results/', views.last_results, name='last_results'),
