@@ -35,6 +35,7 @@ def nymebox_home(request):
         if not path.exists(FTPLogFile):
                 open(FTPLogFile, 'x')
         else:
+                os.remove(FTPLastLogFile)
                 os.rename(FTPLogFile, FTPLastLogFile)
         return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'default', 'resetbutton':'none'})
 
