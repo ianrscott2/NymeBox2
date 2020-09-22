@@ -31,10 +31,10 @@ def nymebox_home(request):
         getftp = NymeBox_Core(config[0])
         if path.exists(FTPLogFile + '.last'):
                 os.remove(FTPLogFile + '.last')
-        if path.exists(FTPLogFile):
-                os.rename(FTPLogFile, FTPLogFile + '.last')
         nymeLog = open(FTPLogFile, 'w')
         nymeLog.close()
+        if path.exists(FTPLogFile):
+                os.rename(FTPLogFile, FTPLogFile + '.last')
         #fileContents=outputfile.read()
         #fileList = getftp.get_ftp_files()
         return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'default', 'resetbutton':'none'})
