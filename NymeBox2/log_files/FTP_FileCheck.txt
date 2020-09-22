@@ -1,0 +1,53 @@
+Looking for fileType *.GIF
+Looking for fileType *.JPG
+Looking for fileType *.NEF
+
+List of files to send: 
+
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9670.jpg
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\MidnightMassacre2019.jpg
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0553.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0618.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0642.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0727.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0793.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0797.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0843.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\DSC_0899.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0169.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0196.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0208.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0232.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0259.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0292.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0473.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0529.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0546.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0553.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0618.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0642.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0727.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0793.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0797.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0843.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0899.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0927.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0951.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0958.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_0972.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9613.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9679.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9750.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9828.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9849.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9908.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9949.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\DSC_9985.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0553.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0618.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0642.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0727.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0793.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0797.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0843.NEF
+C:\\Users\\Ian\\Pictures\\NymeBox\New folder\test\DSC_0899.NEF

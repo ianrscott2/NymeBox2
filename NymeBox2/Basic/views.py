@@ -30,13 +30,8 @@ def index(request):
 def nymebox_home(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
         #getftp = NymeBox_Core(config[0])
-        if not os.access(FTPLastLogFile, os.R_OK):
-                open(FTPLastLogFile, 'x')
-        if not os.access(FTPLogFile, os.R_OK):
-                open(FTPLogFile, 'x')
-        else:
-                os.remove(FTPLastLogFile)
-                os.rename(FTPLogFile, FTPLastLogFile)
+        newlog = open(FTPLogFile, 'w')
+        newlog.close()
         return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'default', 'resetbutton':'none'})
 
 def ftpCheck(request):
