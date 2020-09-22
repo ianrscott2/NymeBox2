@@ -3,6 +3,14 @@ class NymeBox_Core:
     def __init__(self, config):
         self.config = config
 
+    def log_entry(self,log_file,severity,message):
+        import os
+        import sys
+
+        print(severity + ": " + message)
+        #print >>log_file, severity + ": " + message
+        log_file.write(severity + ": " + message)
+
     def get_ftp_files(self):
     
         import os
@@ -15,6 +23,7 @@ class NymeBox_Core:
 
         nymeLogFile = LOG_FILE_FOLDER + 'FTP_FileCheck.txt'
         nymeLog    = open(nymeLogFile, 'w')
+        nymeLog    = open(nymeLogFile, 'a')
 
         mediaList = []
 
@@ -38,11 +47,13 @@ class NymeBox_Core:
         import re
         import glob
         import sys
+        from shutil import copyfile
         from .config import LOG_FILE_FOLDER
         
-        nymeLogFile = LOG_FILE_FOLDER + 'FTP_Progress.txt'
-        nymeLog    = open(nymeLogFile, 'w')
+        FTPLogFile = LOG_FILE_FOLDER + 'FTP_Progress.txt'
+        nymeLog    = open(FTPLogFile, 'w')
         
+
         time = datetime.datetime.utcnow()
         nymeLog.write(str(time) + "\n")
         time = str(time.strftime("%d%b%Y%H%M%S"))
@@ -76,26 +87,29 @@ class NymeBox_Core:
         ftp.cwd(self.config.DestDir)
 
         n=0
+        message = "Mode is " + self.config.ProcMode + "\n\n"
+        self.log_entry(nymeLog, "INFO", message)
+        nymeLog.close()
+
         for eachPic in filesToFTP:
-            nymeLog.write("Preparing to send: " + eachPic + "\n")
+            nymeLog    = open(FTPLogFile, 'a')
             if eachPic != "":
                 file_name, file_extension = os.path.splitext(eachPic)
                 eachPicDest = str(time) + "-" + str(n) + file_extension
-                nymeLog.write("Trying to send " + file_name + " to " + self.config.DestDir + "/" + eachPicDest + "\n")
                 file = open(eachPic, 'rb')
                 ftp_status = ftp.storbinary('STOR ' + eachPicDest, fp=file)
                 file.close()
-                nymeLog.write(ftp_status)
+                #nymeLog.write(ftp_status)
+                justFileName = os.path.basename(file_name)
+                message = "Moving " + justFileName + ".\n"
+                self.log_entry(nymeLog, "INFO", message)
                 if self.config.ProcMode == 'PROD':
-                    nymeLog.write("Process Mode is " + self.config.ProcMode + ". Moving " + eachPic + ".\n")
-                    print("Process Mode is " + self.config.ProcMode + ". Moving " + eachPic + ".\n")
                     os.rename(eachPic,eachPic + '.moved')
-                else:
-                    nymeLog.write("Process Mode is " + self.config.ProcMode + ". NOT Moving " + eachPic + ".\n")
-                    print("Process Mode is " + self.config.ProcMode + ". NOT Moving " + eachPic + ".\n")
             else:
                 nymeLog.write("No more files to move.\n")
             n=n+1
+            nymeLog.close()
         ftp.quit()
-        nymeLog.close()
+        copyfile(FTPLogFile, FTPLogFile + '.last')
+        
         

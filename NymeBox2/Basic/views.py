@@ -6,6 +6,7 @@ from .nymebox import NymeBox_Core
 import socket
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
+import os
 
 from .config import LOG_FILE_FOLDER
 
@@ -15,7 +16,6 @@ if 'nymebox' in socket.gethostname():
 else:
         app_mode = "TEST"
 
-#FTPLogFile = "Basic//FTP_Progress.txt"
 FTPLogFile = LOG_FILE_FOLDER + 'FTP_Progress.txt'
 FTPCheckFile = LOG_FILE_FOLDER + 'FTP_FileCheck.txt'
 
@@ -26,14 +26,13 @@ def index(request):
 
 def nymebox_home(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
-        #return render(request, 'nymebox_home.html', {'config':config[0]})
         getftp = NymeBox_Core(config[0])
+        os.remove(FTPLogFile + '.last')
+        os.rename(FTPLogFile, FTPLogFile + '.last')
+        nymeLog = open(FTPLogFile, 'w')
+        nymeLog.close()
+        #fileContents=outputfile.read()
         #fileList = getftp.get_ftp_files()
-        outputfile = open(FTPCheckFile, "r")
-        fileContents=outputfile.read()
-        #return render(request, 'nymebox_home.html', {'config':config[0],'output':fileContents})
-        render(request, 'nymebox_home.html', {'config':config[0],'output':fileContents})
-        fileList = getftp.get_ftp_files()
         return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'default', 'resetbutton':'none'})
 
 def updatefile(request):
@@ -69,6 +68,6 @@ def config_by_id(request, config_id):
         #return HttpResponse(f"Config Field: {config.field}, Value: {config.value}")
 
 def last_results(request):
-        outputfile = open(FTPLogFile, "r")
+        outputfile = open(FTPLogFile + '.last', "r")
         fileContents=outputfile.read()
         return render(request,'nymebox_lastlog.html',{'output':fileContents})

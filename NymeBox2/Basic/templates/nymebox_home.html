@@ -53,11 +53,11 @@ $(document).ready(function(){
 </table>
 <form action="do_ftp/" name="FTP" method="POST">
   {% csrf_token %}
-  <button type="submit" value="Send via FTP" class="FTP" id="FTPButton" style="display: {{ ftpbutton }};"> FTP Files </button> 
+  <button type="submit" value="Send via FTP" class="FTP" id="FTPButton" style="display: {{ ftpbutton }};"> Send Files </button> 
 </form>
 <form action="/" name="Reset" method="POST">
   {% csrf_token %}
-  <button type="submit" value="Reset" class="FTP" id="ResetButton"  style="display: {{ resetbutton }} ;"> Reset </button>
+  <button type="submit" value="Reset" class="FTP" id="ResetButton" style="display: {{ resetbutton }} ;"> Reset </button>
 </form>
 
 <div id="div1">Loading Log File to show progress...</div>
