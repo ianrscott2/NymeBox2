@@ -29,6 +29,7 @@ def ftpCheck(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
         getftp = NymeBox_Core(config[0])
         fileList = getftp.get_ftp_files()
+        fileList = '\n'.join(fileList)
         return render(request,'nymebox_ftpcheck.html',{'output':fileList})
 
 def FTPLog(request):
