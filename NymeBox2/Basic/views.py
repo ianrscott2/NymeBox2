@@ -7,6 +7,8 @@ import socket
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
 import os
+import os.path
+from os import path
 
 from .config import LOG_FILE_FOLDER
 
@@ -27,8 +29,10 @@ def index(request):
 def nymebox_home(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
         getftp = NymeBox_Core(config[0])
-        os.remove(FTPLogFile + '.last')
-        os.rename(FTPLogFile, FTPLogFile + '.last')
+        if path.exists(FTPLogFile + '.last'):
+                os.remove(FTPLogFile + '.last')
+        if path.exists(FTPLogFile):
+                os.rename(FTPLogFile, FTPLogFile + '.last')
         nymeLog = open(FTPLogFile, 'w')
         nymeLog.close()
         #fileContents=outputfile.read()
