@@ -31,8 +31,7 @@ def nymebox_home(request):
         getftp = NymeBox_Core(config[0])
         if path.exists(FTPLogFile + '.last'):
                 os.remove(FTPLogFile + '.last')
-        nymeLog = open(FTPLogFile, 'w')
-        nymeLog.close()
+        nymeLog = open(FTPLogFile, 'x')
         if path.exists(FTPLogFile):
                 os.rename(FTPLogFile, FTPLogFile + '.last')
         #fileContents=outputfile.read()
@@ -51,6 +50,8 @@ def ftpCheck(request):
         return render(request,'nymebox_ftpcheck.html',{'output':fileContents})
 
 def FTPLog(request):
+        if not path.exists(FTPLogFile):
+                outputfile = open(FTPLogFile, "x")
         outputfile = open(FTPLogFile, "r")
         fileContents=outputfile.read()
         outputfile.close()
