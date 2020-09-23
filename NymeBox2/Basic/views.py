@@ -9,6 +9,7 @@ from django.views.generic.edit import CreateView
 import os
 import os.path
 from os import path
+from django.db import connection
 
 if 'nymebox' in socket.gethostname():
         app_mode = "PROD"

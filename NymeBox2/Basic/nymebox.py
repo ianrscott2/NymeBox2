@@ -1,9 +1,24 @@
 class NymeBox_Core:
 
-    
-
     def __init__(self, config):
+        import socket
         self.config = config
+        if 'nymebox' in socket.gethostname():
+            self.app_mode = "PROD"
+        else:
+            self.app_mode = "TEST"
+
+    def mount_sd_card(self):
+        import os
+        import sys
+        if os.name == 'posix':
+            sd_dev = os.system('sudo fdisk -l | grep -E \'^/dev/sd\' | grep -Eo \'^[^ ]+\'')
+            os.system('mkdir ' + self.config.DestDir)
+            mount_drv = os.system('sudo mount ' + sd_dev + ' ' + self.config.DestDir)
+        else:
+            print("Not a Linux server")
+            mount_drv = "Testing"
+        return mount_drv
 
     def log_entry(self,log_file,severity,message):
         import os
@@ -22,7 +37,8 @@ class NymeBox_Core:
         import glob
         import sys
         from pathlib import Path
-        from .config import LOG_FILE_FOLDER
+        from Basic.models import ConfigItem
+        from django.db import connection
 
         mediaList = []
         FTP_LogFile = ''
@@ -33,9 +49,11 @@ class NymeBox_Core:
                 self.log_entry(FTP_LogFile, "INFO", message)
                 newList = glob.glob(self.config.SourceDir + "/**/" + fileType, recursive=True)
                 mediaList = mediaList + newList
-        self.config.MovedFiles = '\n'.join(mediaList)  
+                fileListUpdate = "UPDATE basic_configitem SET MovedFiles = %s WHERE ProcMode = %s;"
+                fileList = '\n'.join(mediaList)
+                with connection.cursor() as cursor:
+                    cursor.execute(fileListUpdate, [fileList, self.app_mode])
         return mediaList
-        
         
     def do_ftp(self):
     
