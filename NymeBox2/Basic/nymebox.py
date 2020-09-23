@@ -13,8 +13,9 @@ class NymeBox_Core:
         import sys
         if os.name == 'posix':
             sd_dev = os.system('sudo fdisk -l | grep -E \'^/dev/sd\' | grep -Eo \'^[^ ]+\'')
-            os.system('mkdir ' + self.config.DestDir)
-            mount_drv = os.system('sudo mount ' + sd_dev + ' ' + self.config.DestDir)
+            print("Mounting " + sd_dev + " 2> /dev/null")
+            os.system('mkdir ' + str(self.config.DestDir))
+            mount_drv = os.system('sudo mount ' + str(sd_dev) + ' ' + str(self.config.DestDir) + ' 2> /dev/null')
         else:
             print("Not a Linux server")
             mount_drv = "Testing"
