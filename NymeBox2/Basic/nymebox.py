@@ -33,7 +33,7 @@ class NymeBox_Core:
                 current_log = self.log_entry(FTP_LogFile, "INFO", message)
                 newList = glob.glob(self.config.SourceDir + "/**/" + fileType, recursive=True)
                 mediaList = mediaList + newList
-        self.config.MovedFiles = current_log  
+        self.config.MovedFiles = '\n'.join(mediaList)  
         return mediaList
         
         
