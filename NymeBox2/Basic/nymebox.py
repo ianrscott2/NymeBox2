@@ -30,7 +30,7 @@ class NymeBox_Core:
         if self.config.FileTypeList != "":
             for fileType in self.config.FileTypeList.split(","):
                 message = "Looking for fileType " + fileType + "\n"
-                current_log = self.log_entry(FTP_LogFile, "INFO", message)
+                self.log_entry(FTP_LogFile, "INFO", message)
                 newList = glob.glob(self.config.SourceDir + "/**/" + fileType, recursive=True)
                 mediaList = mediaList + newList
         self.config.MovedFiles = '\n'.join(mediaList)  
