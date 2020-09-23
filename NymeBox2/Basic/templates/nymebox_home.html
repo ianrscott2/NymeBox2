@@ -4,7 +4,7 @@
 
 <style>
   .FTP{
-  background-color: green;
+  background-color: red;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -54,6 +54,10 @@
 <form action="do_ftp/" name="FTP" method="POST">
   {% csrf_token %}
   <button type="submit" value="Send via FTP" class="FTP" id="FTPButton" style="display: {{ ftpbutton }};"> Send Files </button> 
+</form>
+<form action="mount_sdcard/" name="Mount_SD" method="POST">
+  {% csrf_token %}
+  <button type="submit" value="Mount SD Card" class="FTP" id="FTPButton" style="display: {{ ftpbutton }};" > Mount SD Card </button> 
 </form>
 <form action="/" name="Reset" method="POST">
   {% csrf_token %}

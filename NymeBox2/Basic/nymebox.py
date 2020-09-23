@@ -47,7 +47,9 @@ class NymeBox_Core:
             for fileType in self.config.FileTypeList.split(","):
                 message = "Looking for fileType " + fileType + "\n"
                 self.log_entry(FTP_LogFile, "INFO", message)
-                newList = glob.glob(self.config.SourceDir + "/**/" + fileType, recursive=True)
+                newList = glob.glob(self.config.SourceDir + "/**/" + fileType.upper(), recursive=True, )
+                mediaList = mediaList + newList
+                newList = glob.glob(self.config.SourceDir + "/**/" + fileType.lower(), recursive=True, )
                 mediaList = mediaList + newList
                 fileListUpdate = "UPDATE basic_configitem SET MovedFiles = %s WHERE ProcMode = %s;"
                 fileList = '\n'.join(mediaList)
