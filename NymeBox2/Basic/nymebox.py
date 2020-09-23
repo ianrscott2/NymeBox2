@@ -8,7 +8,7 @@ class NymeBox_Core:
         else:
             self.app_mode = "TEST"
 
-    def mount_sd_card(self):
+    def mount_sdcard(self):
         import os
         import sys
         if os.name == 'posix':

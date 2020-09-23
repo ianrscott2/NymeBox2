@@ -53,3 +53,9 @@ def config_by_id(request, config_id):
 def last_results(request):
         fileContents = ''
         return render(request,'nymebox_lastlog.html',{'output':fileContents})
+
+def mount_sdcard(request):
+        config = ConfigItem.Manager.raw(configQuery, [app_mode])
+        mount_card = NymeBox_Core(config[0])
+        mount = mount_card.mount_sdcard()
+        return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'none', 'resetbutton':'default'})
