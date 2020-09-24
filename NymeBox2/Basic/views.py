@@ -83,5 +83,8 @@ def mount_sdcard(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
         mount_card = NymeBox_Core(config[0])
         mount = mount_card.mount_sdcard()
-        #print("The response from mount is: " + mount)
-        return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'none', 'resetbutton':'default'})
+        fileListUpdate = "UPDATE basic_configitem SET LastLog = %s WHERE ProcMode = %s;"
+        with connection.cursor() as cursor:
+            cursor.execute(fileListUpdate, [mount, self.app_mode])
+        response = redirect('/')
+        return response
