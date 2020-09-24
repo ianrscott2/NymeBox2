@@ -13,16 +13,18 @@ class NymeBox_Core:
         import sys
         if os.name == 'posix':
             sd_dev = os.system('sudo fdisk -l | grep -E \'^/dev/sd\' | grep -Eo \'^[^ ]+\'')
-            print("Mounting " + sd_dev + " 2> /dev/null")
+            message = "Mounting " + sd_dev
+            self.log_entry(FTP_LogFile, "INFO", message)            
             os.system('mkdir ' + str(self.config.DestDir))
             os.system('sudo mount ' + str(sd_dev) + ' ' + str(self.config.DestDir) + ' 2> /dev/null')
-            mounted = os.system('df -k | grep ' + DestDir)
+            mounted = os.system('df -k | grep ' + self.config.DestDir)
+            message = "Mount result is: " + mounted
+            self.log_entry(FTP_LogFile, "INFO", message)            
             if mounted:
                 mount_drv = "Success"
             else:
                 mount_drv = "Failed" 
         else:
-            print("Not a Linux server")
             mount_drv = "Success"
         return mount_drv
 
@@ -31,7 +33,6 @@ class NymeBox_Core:
         import sys
 
         current_log = severity + ": " + message
-        print(current_log)
         #log_file.write(severity + ": " + message)
         return current_log
 
@@ -97,8 +98,9 @@ class NymeBox_Core:
             message = "Unable to connect to FTP Server " + self.config.FtpURL + ", exiting...\n"
             current_log =  current_log + self.log_entry(FTP_LogFile, "INFO", message)
             fileListUpdate = "UPDATE basic_configitem SET LastLog = %s WHERE ProcMode = %s;"
-                with connection.cursor() as cursor:
-            cursor.execute(fileListUpdate, [current_log, self.app_mode])            return
+            with connection.cursor() as cursor:
+                cursor.execute(fileListUpdate, [current_log, self.app_mode])
+            return
 
         message = "Connected to: " + self.config.FtpURL + "\n"
         current_log =  current_log + self.log_entry(FTP_LogFile, "INFO", message)
@@ -130,6 +132,6 @@ class NymeBox_Core:
         fileListUpdate = "UPDATE basic_configitem SET LastLog = %s WHERE ProcMode = %s;"
         with connection.cursor() as cursor:
             cursor.execute(fileListUpdate, [current_log, self.app_mode])
-        return
+        return current_log
         
         

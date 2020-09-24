@@ -64,9 +64,11 @@ def do_ftp(request):
         #return HttpResponse("Trying to do an FTP!")
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
         ftping = NymeBox_Core(config[0])
-        ftping.do_ftp()
-        response = redirect('/')
-        return response
+        logInfo = ftping.do_ftp()
+        #response = redirect('/')
+        #return response
+        #print(logInfo)
+        return render(request,'nymebox_completed.html',{'logInfo':logInfo})
         
 def config_by_id(request, config_id):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
@@ -74,12 +76,12 @@ def config_by_id(request, config_id):
         #return HttpResponse(f"Config Field: {config.field}, Value: {config.value}")
 
 def last_results(request):
-        fileContents = ''
-        return render(request,'nymebox_lastlog.html',{'output':fileContents})
+        config = ConfigItem.Manager.raw(configQuery, [app_mode])
+        return render(request,'nymebox_lastlog.html',{'lastLog':config[0].LastLog})
 
 def mount_sdcard(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
         mount_card = NymeBox_Core(config[0])
         mount = mount_card.mount_sdcard()
-        print("The response from mount is: " + mount)
+        #print("The response from mount is: " + mount)
         return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'none', 'resetbutton':'default'})
