@@ -8,6 +8,15 @@ class NymeBox_Core:
         else:
             self.app_mode = "TEST"
 
+    def log_entry(self,log_file,severity,message):
+        import os
+        import sys
+
+        current_log = severity + ": " + message
+        print(current_log)
+        #log_file.write(severity + ": " + message)
+        return current_log
+
     def mount_sdcard(self):
         
         FTP_LogFile = ''
@@ -15,7 +24,7 @@ class NymeBox_Core:
         import os
         import sys
         if os.name == 'posix':
-            sd_dev = os.system('sudo fdisk -l | grep -E \'^/dev/sd\' | grep -Eo \'^[^ ]+\'')
+            sd_dev = os.system("sudo fdisk -l | grep -E '^/dev/sd' | grep -Eo '^[^ ]+'")
             message = "Mounting " + str(sd_dev)
             self.log_entry(FTP_LogFile, "INFO", message)            
             os.system('mkdir ' + str(self.config.DestDir))
@@ -31,13 +40,7 @@ class NymeBox_Core:
             mount_drv = "Success"
         return mount_drv
 
-    def log_entry(self,log_file,severity,message):
-        import os
-        import sys
 
-        current_log = severity + ": " + message
-        #log_file.write(severity + ": " + message)
-        return current_log
 
     def get_ftp_files(self):
     
