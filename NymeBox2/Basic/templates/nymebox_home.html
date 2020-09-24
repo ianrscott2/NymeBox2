@@ -4,7 +4,7 @@
 
 <style>
   .FTP{
-  background-color: red;
+  background-color: blue;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -16,7 +16,7 @@
   cursor: pointer;
   width: 300px;
   }
-              
+    
   </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -51,17 +51,18 @@
 
 <tr><td>Dest Dir: </td><td>{{ config.DestDir }}</td></tr>
 </table>
-<form action="do_ftp/" name="FTP" method="POST">
-  {% csrf_token %}
-  <button type="submit" value="Send via FTP" class="FTP" id="FTPButton" style="display: {{ ftpbutton }};"> Send Files </button> 
-</form>
+
 <form action="mount_sdcard/" name="Mount_SD" method="POST">
   {% csrf_token %}
-  <button type="submit" value="Mount SD Card" class="FTP" id="FTPButton" style="display: {{ ftpbutton }};" > Mount SD Card </button> 
+  <button type="submit" value="Mount SD Card" class="FTP" id="MountButton" style="display: {{ mountButton }};" > Mount SD Card </button> 
 </form>
-<form action="/" name="Reset" method="POST">
+<form action="ftpCheck/" name="FileCheck" method="POST">
   {% csrf_token %}
-  <button type="submit" value="Reset" class="FTP" id="ResetButton" style="display: {{ resetbutton }} ;"> Reset </button>
+  <button type="submit" value="Reset" class="FTP" id="FileCheckButton" style="display: {{ fileCheckButton }};"> Check File List </button>
+</form>
+<form action="do_ftp/" name="FTP" method="POST">
+  {% csrf_token %}
+  <button type="submit" value="Send via FTP" class="FTP" id="FTPButton" style="display: {{ ftpButton }};"> Send Files </button> 
 </form>
 
 <!--

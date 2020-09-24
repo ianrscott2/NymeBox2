@@ -10,6 +10,7 @@ import os
 import os.path
 from os import path
 from django.db import connection
+from django.shortcuts import redirect
 
 if 'nymebox' in socket.gethostname():
         app_mode = "PROD"
@@ -18,20 +19,41 @@ else:
 
 configQuery = "SELECT * FROM basic_configitem WHERE ProcMode = %s"
 
-def index(request):
-        return HttpResponse("Hello World!")
+def system_check():
+        config = ConfigItem.Manager.raw(configQuery, [app_mode])
+        nymebox_core = NymeBox_Core(config[0])
+        mount = nymebox_core.mount_sdcard()
+        fileList = nymebox_core.get_ftp_files()
+        ftpButton = 'none'
+
+        if fileList:
+                fileCheckButton = 'none'
+                ftpButton = 'default'
+        else:
+                fileCheckButton = 'default'
+
+        if mount == "Success":
+                mountButton = 'none'
+        else:
+                mountButton = 'default'
+        return mountButton, fileCheckButton, ftpButton 
 
 def nymebox_home(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
-        #getftp = NymeBox_Core(config[0])
-        return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'default', 'resetbutton':'none'})
+        buttonStatus = system_check()
+        return render(request, 'nymebox_home.html', {'config':config[0], 'mountButton': buttonStatus[0], 'fileCheckButton': buttonStatus[1],'ftpButton': buttonStatus[2]})
 
-def ftpCheck(request):
+def ftpCheckList(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
         getftp = NymeBox_Core(config[0])
-        fileList = getftp.get_ftp_files()
-        fileList = '\n'.join(fileList)
-        return render(request,'nymebox_ftpcheck.html',{'output':fileList})
+        fileCheckList = getftp.get_ftp_files()
+        fileCheckList = '\n'.join(fileCheckList)
+        return render(request, 'nymebox_ftpcheck.html', {'fileCheckList': fileCheckList})
+
+def ftpCheck(request):
+        buttonStatus = system_check()
+        response = redirect('/')
+        return response
 
 def FTPLog(request):
         fileContents = ""
@@ -43,7 +65,8 @@ def do_ftp(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
         ftping = NymeBox_Core(config[0])
         ftping.do_ftp()
-        return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'none', 'resetbutton':'default'})
+        response = redirect('/')
+        return response
         
 def config_by_id(request, config_id):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
@@ -58,4 +81,5 @@ def mount_sdcard(request):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])
         mount_card = NymeBox_Core(config[0])
         mount = mount_card.mount_sdcard()
+        print("The response from mount is: " + mount)
         return render(request, 'nymebox_home.html', {'config':config[0], 'ftpbutton':'none', 'resetbutton':'default'})
