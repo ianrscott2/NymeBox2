@@ -9,6 +9,9 @@ class NymeBox_Core:
             self.app_mode = "TEST"
 
     def mount_sdcard(self):
+        
+        FTP_LogFile = ''
+        
         import os
         import sys
         if os.name == 'posix':
