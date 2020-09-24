@@ -21,7 +21,7 @@ class NymeBox_Core:
             os.system('mkdir ' + str(self.config.DestDir))
             os.system('sudo mount ' + str(sd_dev) + ' ' + str(self.config.DestDir) + ' 2> /dev/null')
             mounted = os.system('df -k | grep ' + self.config.DestDir)
-            message = "Mount result is: " + mounted
+            message = "Mount result is: " + str(mounted)
             self.log_entry(FTP_LogFile, "INFO", message)            
             if mounted:
                 mount_drv = "Success"
