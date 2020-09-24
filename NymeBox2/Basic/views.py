@@ -51,7 +51,7 @@ def ftpCheckList(request):
         return render(request, 'nymebox_ftpcheck.html', {'fileCheckList': fileCheckList})
 
 def ftpCheck(request):
-        buttonStatus = system_check()
+        #buttonStatus = system_check()
         response = redirect('/')
         return response
 
@@ -68,7 +68,7 @@ def do_ftp(request):
         #response = redirect('/')
         #return response
         #print(logInfo)
-        return render(request,'nymebox_completed.html',{'logInfo':logInfo})
+        return render(request,'nymebox_completed.html',{'logInfo':logInfo[0],'logInfoStatus':logInfo[1]})
         
 def config_by_id(request, config_id):
         config = ConfigItem.Manager.raw(configQuery, [app_mode])

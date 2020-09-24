@@ -100,7 +100,7 @@ class NymeBox_Core:
             fileListUpdate = "UPDATE basic_configitem SET LastLog = %s WHERE ProcMode = %s;"
             with connection.cursor() as cursor:
                 cursor.execute(fileListUpdate, [current_log, self.app_mode])
-            return
+            return current_log, 'ERROR'
 
         message = "Connected to: " + self.config.FtpURL + "\n"
         current_log =  current_log + self.log_entry(FTP_LogFile, "INFO", message)
@@ -132,6 +132,6 @@ class NymeBox_Core:
         fileListUpdate = "UPDATE basic_configitem SET LastLog = %s WHERE ProcMode = %s;"
         with connection.cursor() as cursor:
             cursor.execute(fileListUpdate, [current_log, self.app_mode])
-        return current_log
+        return current_log, 'Success'
         
         
