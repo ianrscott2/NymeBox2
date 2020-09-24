@@ -11,12 +11,12 @@ class NymeBox_Core:
     def mount_sdcard(self):
         
         FTP_LogFile = ''
-        
+
         import os
         import sys
         if os.name == 'posix':
             sd_dev = os.system('sudo fdisk -l | grep -E \'^/dev/sd\' | grep -Eo \'^[^ ]+\'')
-            message = "Mounting " + sd_dev
+            message = "Mounting " + str(sd_dev)
             self.log_entry(FTP_LogFile, "INFO", message)            
             os.system('mkdir ' + str(self.config.DestDir))
             os.system('sudo mount ' + str(sd_dev) + ' ' + str(self.config.DestDir) + ' 2> /dev/null')
