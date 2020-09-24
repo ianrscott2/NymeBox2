@@ -96,7 +96,9 @@ class NymeBox_Core:
         except:
             message = "Unable to connect to FTP Server " + self.config.FtpURL + ", exiting...\n"
             current_log =  current_log + self.log_entry(FTP_LogFile, "INFO", message)
-            return
+            fileListUpdate = "UPDATE basic_configitem SET LastLog = %s WHERE ProcMode = %s;"
+                with connection.cursor() as cursor:
+            cursor.execute(fileListUpdate, [current_log, self.app_mode])            return
 
         message = "Connected to: " + self.config.FtpURL + "\n"
         current_log =  current_log + self.log_entry(FTP_LogFile, "INFO", message)
