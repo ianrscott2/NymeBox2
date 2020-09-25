@@ -84,6 +84,6 @@ def mount_sdcard(request):
         mount = mount_card.mount_sdcard()
         fileListUpdate = "UPDATE basic_configitem SET LastLog = %s WHERE ProcMode = %s;"
         with connection.cursor() as cursor:
-            cursor.execute(fileListUpdate, [mount, self.app_mode])
+            cursor.execute(fileListUpdate, [mount, app_mode])
         response = redirect('/')
         return response
