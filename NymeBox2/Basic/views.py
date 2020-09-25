@@ -25,17 +25,16 @@ def system_check():
         mount = nymebox_core.mount_sdcard()
         fileList = nymebox_core.get_ftp_files()
         ftpButton = 'none'
+        mountButton = 'none'
+        fileCheckButton = 'none'
 
-        if fileList:
-                fileCheckButton = 'none'
-                ftpButton = 'default'
-        else:
-                fileCheckButton = 'default'
-
-        if mount == "Success":
-                mountButton = 'none'
-        else:
+        if not mount == "Success":
                 mountButton = 'default'
+        elif not fileList:
+                fileCheckButton = 'default'
+        else:
+                ftpButton = 'default'
+
         return mountButton, fileCheckButton, ftpButton 
 
 def nymebox_home(request):
